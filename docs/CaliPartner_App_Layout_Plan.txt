@@ -1,0 +1,57 @@
+﻿CaliPartner
+App layout, navigation and structure plan (Android and iOS)
+Pricing and Access: What Was Understood
+Pricing is per user, not per room. Only paid users can create or join rooms. Everyone gets a 3-day free window to try logging, one 2-person room and streaks. After that, rooms need a paid plan:
+India: ₹99/month or ₹249 for 3 months
+International: $4.99/month or $12.99 for 3 months, with regional pricing in lower-income countries
+Things to be aware of
+If one partner stops paying, the other&apos;s room goes inactive. This is the main churn risk, so show the lapsed partner a clear &quot;rejoin your room&quot; screen.
+Apple and Google require subscriptions to go through their in-app billing (Google Play Billing and Apple IAP), and iOS needs a visible &quot;Restore purchases&quot; option.
+Open decision: does solo logging stay free after day 3, or does everything lock? Recommendation: keep basic logging free forever, since it keeps people in the app and ready to upgrade. The design below assumes this.
+Navigation: 5 Tabs, Same on Android and iOS
+Tab
+Purpose
+Today
+Your food diary, calorie/macro rings, water, steps
+Room
+Your main feature: the side-by-side partner and group view
++ Log (center button)
+Quick add: search, barcode, photo, recent, custom
+Ranks
+Leaderboards, challenges, occasion plans (Winter Arc, birthday)
+Me
+Progress, goals, privacy, subscription, settings
+The center &quot;+&quot; is the most-used action, so it should be one thumb tap from anywhere.
+Key Screens
+Today
+A calorie ring (eaten vs goal), a macro bar, then meal sections (Breakfast, Lunch, Dinner, Snacks) with an add button on each. Water and steps sit as small cards below. A small strip at the top shows your room members&apos; avatars with a green dot for who has logged today.
+Room (the main USP)
+A header with the room name, a streak count and member avatars.
+Side-by-side card: you on the left, your partner on the right. Each shows a goal-completion ring (% of their own goal, not raw calories), steps, and a meal checklist showing logged or not logged per meal.
+For rooms with more than 2 people, swipe or tap an avatar to compare &quot;me vs this person.&quot;
+Quick actions: a nudge button, emoji reactions on meals, and &quot;log shared meal.&quot;
+A room feed with activity like &quot;Priya logged lunch&quot; and &quot;Rahul hit his protein goal.&quot;
+An eye icon on each shared item shows what the other person can see.
++ Log
+Opens as a bottom sheet with tabs for Search, Scan, Photo and Recent/My Foods. After picking a food, a quantity screen has a &quot;share with room&quot; toggle and a &quot;someone else ate this too&quot; option, so one log can serve two people.
+Ranks
+A weekly leaderboard with divisions (cutting, bulking, beginner), ranked by consistency and % of goal achieved. Seasonal challenges sit as cards above it. Keep the ranking rules (no &quot;lowest calories&quot; ranking) visible in a small info note.
+Me
+Weight and measurement graphs, goal settings, privacy controls (what partners and friends can see), subscription management, Health Connect / Apple Health sync settings, and notifications.
+User Flows
+New user: splash → pick goal (cut, bulk, maintain) → enter body stats → get a calorie target → land on Today. Delay the signup wall so people can log their first meal quickly.
+Invited user: invite link → app install (or opens directly if installed) → a preview of the room with &quot;Rahul is waiting for you&quot; → quick signup → goal setup → into the room. If the friend isn&apos;t paid, show the paywall after the room preview, not before, since seeing the room increases conversion.
+Paywall: appears on day 4 when the user taps the Room tab, plus a soft banner on days 2 and 3 showing days left. Show both plans, &quot;Restore purchases,&quot; and a clear note about what stays free.
+Android vs iOS Differences
+The structure is identical. What differs is platform behavior:
+Back navigation: Android uses the system back button or gesture. iOS uses a swipe from the left edge plus a back arrow. Don&apos;t override these.
+Health data: Health Connect on Android, HealthKit on iOS.
+Sign-in: if you offer Google login on iOS, Apple requires &quot;Sign in with Apple&quot; as well.
+Sheets and share: use each platform&apos;s native share sheet for invite links.
+Widgets: a home screen widget showing &quot;you vs partner today&quot; can be a great retention tool on both, but build it after the MVP.
+Tech choice: Flutter or React Native lets you build one codebase for both, which suits a small team.
+Design Notes
+Use partner-neutral colors. Avoid red/green ranking visuals that make someone feel like they&apos;re &quot;losing.&quot;
+Make the side-by-side view readable at a glance, with big rings and few numbers.
+Keep the first screen after login useful even with no partner yet, with a prominent &quot;Invite your partner&quot; card.
+
