@@ -2,13 +2,13 @@
 module.exports.pages = (S) => ({
   "terms.html": {
     title: "Terms and conditions",
-    desc: "The terms that govern your use of the CaliPartner app and website, including subscriptions, rooms, chat and acceptable use.",
+    desc: "The terms that govern your use of the CaliPartner app and website, including subscriptions, rooms, chat, AI coaching, and acceptable use.",
     h1: "Terms and conditions",
     lead: "Please read these terms before using CaliPartner. By creating an account or using the app you agree to them.",
     html: `
 <div class="toc"><a href="#about">About</a><a href="#eligibility">Eligibility</a><a href="#accounts">Accounts</a><a href="#subs">Subscriptions</a><a href="#rooms">Rooms and chat</a><a href="#health">Health disclaimer</a><a href="#liability">Liability</a><a href="#contact">Contact</a></div>
 <h2 id="about">1. About the service</h2>
-<p>CaliPartner (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is operated by ${S.legalName}, ${S.address}. CaliPartner is a mobile app and website for tracking food, water, steps, workouts and body progress, and for sharing selected information with other people in private &ldquo;rooms&rdquo;. The service is delivered digitally; there is no physical product or shipping.</p>
+<p>CaliPartner (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is operated by ${S.legalName}, ${S.address}. CaliPartner is a mobile app and web application for tracking food, water, steps, workouts, and body progress, and for sharing selected information with other people in private &ldquo;rooms&rdquo;. The service is delivered digitally; there is no physical product or shipping.</p>
 <h2 id="eligibility">2. Eligibility</h2>
 <p>You must be at least <strong>18 years old</strong> to use CaliPartner. We collect your date of birth and block users under 18. If we learn that an account belongs to someone under 18, we will close it.</p>
 <h2 id="accounts">3. Your account</h2>
@@ -19,14 +19,13 @@ module.exports.pages = (S) => ({
 </ul>
 <h2 id="subs">4. Plans, billing and free trial</h2>
 <ul>
-<li><strong>Free tier.</strong> Personal logging of food, water, steps, workouts and weight, your diary, personal progress and your personal streak are free.</li>
-<li><strong>Room plan.</strong> Creating or joining rooms, room chat, room progress and related features need an active trial or paid plan. Pricing is per user, not per room.</li>
-<li><strong>Free trial.</strong> New users get a 3-day trial of room features, including one room of 2 people.</li>
-<li><strong>Prices.</strong> India: &#8377;99 per month or &#8377;249 per 3 months. International: $4.99 per month or $12.99 per 3 months. Regional pricing applies in other countries. Taxes may apply.</li>
-<li><strong>Auto-renewal.</strong> Plans renew automatically at the end of each period until you cancel. Cancel before the renewal date through your store subscription settings to avoid the next charge.</li>
-<li><strong>Payment processing.</strong> In-app purchases are processed by Google Play Billing or Apple In-App Purchase. Where a purchase is made through our website, payment is processed by our payment partner, Dodo Payments, which acts as the merchant of record for that transaction.</li>
-<li><strong>Refunds.</strong> See our <a href="refund-policy.html">refund and cancellation policy</a>.</li>
-<li>If one member's plan ends, the room pauses for all members and the streak is kept for 30 days. Chat in a paused room is read-only.</li>
+<li><strong>Free Tier (Basic):</strong> Personal logging of food, water, steps, workouts and weight, your diary, personal progress, personal streaks, and your free 1-on-1 partner room (capacity 2 people) are free forever.</li>
+<li><strong>Plus Plan:</strong> The habit and community powerhouse. India: &#8377;249 per month or &#8377;1,499 per year (~50% annual savings). Global: $4.99 per month or $29.99 per year (~53% annual savings). Includes a <strong>7-day free trial</strong> on both monthly and annual plans. Features hosting up to 3 rooms (up to 5 people per room), monthly macro growth checks (every 30 days), full shared diary, send &amp; read room text chat, shared workouts, live focus sessions, room leaderboards, fasting timer, and advanced micronutrient tracking.</li>
+<li><strong>Pro Plan:</strong> The elite AI-coached nutrition and body transformation tier. India: &#8377;499 per month or &#8377;2,499 per year (~58% annual savings). Global: $9.99 per month or $49.00 per year (~61% annual savings). <strong>No free trial (0 days)</strong> due to high underlying vision and language model compute costs. Billed immediately upon confirmation. Features hosting up to 5 rooms (up to 20 people per room), weekly AI growth &amp; macro recalculation checks (every 7 days), context-aware Personal AI Coach (10 msgs/day), AI Photo Food Logging (5 scans/day), Chat-to-Log, &ldquo;Fits My Day&rdquo; AI recipe collections, room photo &amp; video sharing, weekly AI progress summaries, and priority support.</li>
+<li><strong>Room Sponsorship Model (Host Pays):</strong> The room creator/host's plan determines the room capacity (Free: 2, Plus: 5, Pro: 20 members). Invited members join any paid room for free without needing their own subscription. If a host's plan lapses, the room enters a 30-day grace/paused state where any member can sponsor it, preserving all streaks and history.</li>
+<li><strong>Auto-renewal:</strong> Plans renew automatically at the end of each period until you cancel. Cancel before the renewal date through your store or web subscription settings to avoid the next charge.</li>
+<li><strong>Payment processing:</strong> In-app purchases are processed by Google Play Billing, Apple In-App Purchase, or RevenueCat. Web purchases are processed by our payment partner, Dodo Payments, which acts as the merchant of record for web transactions.</li>
+<li><strong>Refunds:</strong> See our <a href="refund-policy.html">refund and cancellation policy</a>.</li>
 </ul>
 <h2 id="rooms">5. Rooms, chat and your content</h2>
 <p>Rooms are private. Only room members can read or send chat messages and images. You keep ownership of the content you create, and you give us a limited licence to store, process and display it as needed to run the service for you and the members you share with.</p>
@@ -34,7 +33,7 @@ module.exports.pages = (S) => ({
 <h2>6. Acceptable use</h2>
 <ul>
 <li>Do not harass, threaten, impersonate or spam others, or share unlawful, hateful, sexual or exploitative content.</li>
-<li>Do not use CaliPartner to encourage eating disorders, extreme restriction or unsafe weight loss.</li>
+<li>Do not use CaliPartner to encourage eating disorders, extreme restriction or unsafe weight loss. Calorie safety floors (1,200 kcal women, 1,500 kcal men) and weekly rate caps (1% body weight per week) are strictly enforced.</li>
 <li>Do not scrape, reverse engineer, overload or attempt to break into the service.</li>
 </ul>
 <h2 id="health">7. Health disclaimer</h2>
@@ -84,33 +83,33 @@ module.exports.pages = (S) => ({
 <li>To provide the app: calculate targets, store your diary, show progress and sync across devices.</li>
 <li>To run rooms: display the data you chose to share to your room members and deliver chat and notifications.</li>
 <li>To process subscriptions and prevent fraud.</li>
-<li>To provide AI photo estimates. Photos are sent to a processing provider only to produce a food estimate.</li>
+<li>To provide AI photo estimates and coaching. Photos and food text queries are sent to secure AI inference endpoints solely to generate nutrition analysis and coaching feedback.</li>
 <li>To keep the community safe: handle reports, enforce rules and prevent abuse.</li>
 <li>To improve reliability and product quality using aggregated analytics.</li>
 </ul>
 <p>We do <strong>not</strong> sell your personal data and we do not use your health data for advertising.</p>
 <h2 id="share">3. Who can see your data</h2>
 <h3>Other room members</h3>
-<p>Sharing is controlled by you, per room and per data type. By default, room members see only whether you logged today, your streak and your goal-completion percent. Calories, macros, individual meals and your weight number stay hidden unless you opt in. Chat messages and images are visible only to members of that room.</p>
+<p>Sharing is controlled by you, per room and per data type. By default, room members see only whether you logged today, your streak and your goal-completion percent. Calories, macros, individual meals and your weight number stay hidden unless you opt in. Chat messages and media are visible only to members of that specific room.</p>
 <h3>Leaderboards</h3>
-<p>Leaderboards show only your nickname, avatar and score. You can opt out at any time.</p>
+<p>Leaderboards show only your nickname, avatar and consistency score. You can opt out at any time.</p>
 <h3>Service providers</h3>
-<p>We share data with providers that help us operate, such as cloud hosting and database, push notifications, crash reporting and analytics, image storage, AI photo estimation, subscription management and payment processing. They may only use data to provide services to us.</p>
+<p>We share data with providers that help us operate: cloud infrastructure (Cloudflare R2, database), push notifications, AI inference providers, subscription management (RevenueCat) and payment processing (Dodo Payments). They may only use data to provide services to us.</p>
 <h3>Legal reasons</h3>
 <p>We may disclose information if required by law or to protect the safety of users or the public.</p>
 <h2 id="rights">4. Your choices and rights</h2>
 <ul>
 <li>Change what you share at any time under Me, then Privacy. Changes apply immediately.</li>
-<li>Access, correct or export your data. Export is available in the app, or by emailing us.</li>
+<li>Access, correct or export your data. Full JSON/CSV data export is available in the app.</li>
 <li>Delete your account and data in the app or through our <a href="delete-account.html">account deletion page</a>.</li>
 <li>Withdraw permissions (health data, camera, notifications) in your device settings.</li>
 <li>Choose &ldquo;Nobody&rdquo; under who can find you by username.</li>
-<li>If you are in India, you have rights under the Digital Personal Data Protection Act, 2023, including access, correction, erasure and grievance redressal. If you are in the EEA or UK, you have rights under GDPR. Contact us to exercise them.</li>
+<li>If you are in India, you have rights under the Digital Personal Data Protection Act, 2023. If you are in the EEA or UK, you have rights under GDPR. Contact us to exercise them.</li>
 </ul>
 <h2 id="retention">5. How long we keep data</h2>
-<p>We keep your data while your account is active. When you delete your account, we remove personal data within 30 days, except limited records we must keep for legal, tax, fraud-prevention or dispute purposes. Your past chat messages in a room are removed when you delete them or your account. Backups are overwritten on a rolling basis.</p>
+<p>We keep your data while your account is active. When you delete your account, we remove personal data within 30 days, except limited records we must keep for legal, tax, fraud-prevention or dispute purposes. Backups are overwritten on a rolling basis.</p>
 <h2 id="security">6. Security</h2>
-<p>We use encryption in transit, access controls and server-side checks on every room read and write. Location (EXIF) metadata is stripped from images you upload. No system is perfectly secure, so please use a strong login and tell us right away if you suspect misuse.</p>
+<p>We use encryption in transit, access controls and server-side security definers on every room read and write. Location (EXIF) metadata is stripped from images you upload. No system is perfectly secure, so please use a strong login and tell us right away if you suspect misuse.</p>
 <h2>7. Children</h2>
 <p>CaliPartner is for adults aged 18 and over. We do not knowingly collect data from anyone under 18. See our <a href="child-safety.html">child safety page</a>.</p>
 <h2>8. International transfers</h2>
@@ -128,29 +127,29 @@ module.exports.pages = (S) => ({
     lead: "Cancel anytime. Here is how cancellation works and how to request a refund.",
     html: `
 <h2>1. Free trial</h2>
-<p>New users get a 3-day free trial of room features. You are not charged during the trial. Basic solo logging remains free after it ends.</p>
+<p>CaliPartner Plus includes a <strong>7-day free trial</strong> on both Monthly and Annual subscriptions. You can test all room hosting, chat, focus sessions, and advanced micronutrients for 7 days without being charged. If you cancel during the trial, you will not be billed. CaliPartner Pro does not include a free trial due to immediate vision and AI compute costs.</p>
 <h2>2. Cancelling your subscription</h2>
-<p>You can cancel at any time. Your plan stays active until the end of the period you have already paid for, and then it does not renew. Deleting the app or your CaliPartner account does <strong>not</strong> cancel a store subscription, so please cancel first.</p>
+<p>You can cancel at any time. Your plan stays active until the end of the period you have already paid for, and then it does not renew. Deleting the app or your CaliPartner account does <strong>not</strong> cancel a store or web subscription, so please cancel first.</p>
 <ul>
 <li><strong>Google Play:</strong> open Play Store, tap your profile, choose Payments and subscriptions, then Subscriptions, select CaliPartner and tap Cancel.</li>
 <li><strong>App Store:</strong> open Settings, tap your name, choose Subscriptions, select CaliPartner and tap Cancel Subscription.</li>
-<li><strong>Web purchases:</strong> use the cancellation link in your receipt email from Dodo Payments, or email us.</li>
+<li><strong>Web purchases (Dodo Payments):</strong> use the cancellation link in your receipt email from Dodo Payments, or manage your subscription in your web account settings.</li>
 </ul>
 <h2>3. Refunds</h2>
 <ul>
-<li><strong>Google Play and App Store purchases.</strong> The stores process these refunds under their own policies. Request one through <a href="https://support.google.com/googleplay/answer/2479637">Google Play refunds</a> or <a href="https://reportaproblem.apple.com">Apple's Report a Problem</a>. We cannot issue refunds for store purchases ourselves, but we will support your request where we can.</li>
-<li><strong>Web purchases.</strong> If you bought through our website, you may request a refund within <strong>7 days</strong> of the charge, provided you have not meaningfully used the paid room features. Email us with your registered email and receipt.</li>
-<li><strong>Accidental or duplicate charges and billing errors.</strong> We will refund these in full when verified.</li>
-<li><strong>Not eligible.</strong> Partial-period refunds after the 7-day window, and plans ended because of a breach of our terms.</li>
+<li><strong>Google Play and App Store purchases:</strong> The stores process these refunds under their own policies. Request one through <a href="https://support.google.com/googleplay/answer/2479637">Google Play refunds</a> or <a href="https://reportaproblem.apple.com">Apple's Report a Problem</a>. We cannot issue refunds for store purchases directly, but we will support your request where we can.</li>
+<li><strong>Web purchases (Dodo Payments):</strong> If you subscribed through our website and wish to cancel outside the trial window, you may request a refund within <strong>7 days</strong> of the initial charge, provided you have not meaningfully utilized high-compute AI coaching or photo scanning. Email us with your registered email and receipt.</li>
+<li><strong>Accidental or duplicate charges:</strong> We will refund duplicate or erroneous charges in full upon verification.</li>
+<li><strong>Not eligible:</strong> Partial-period refunds after the 7-day window, and plans terminated for serious violations of our community guidelines.</li>
 </ul>
 <h2>4. How long refunds take</h2>
-<p>Approved web refunds are sent to the original payment method and usually take 5 to 10 business days to appear, depending on your bank or payment provider.</p>
-<h2>5. If a partner's plan ends</h2>
-<p>If your partner cancels or their plan lapses, your room pauses and your streak is saved for 30 days. This is not a billing error and does not by itself qualify for a refund. You can rejoin when both of you have an active plan.</p>
+<p>Approved web refunds are issued to the original payment method and typically take 5 to 10 business days to appear on your bank statement.</p>
+<h2>5. If a host's plan ends (Room Sponsorship)</h2>
+<p>Because CaliPartner uses a host-sponsorship model, room members enjoy room features at no charge under the host's plan. If the host's plan lapses, the room enters a <strong>30-day grace/paused state</strong> where all streaks, routines, and chat history are preserved. Any room member can upgrade to sponsor the room to reactivate it immediately.</p>
 <h2>6. Delivery</h2>
-<p>CaliPartner is a digital service. Access starts as soon as your payment is confirmed. There is no physical shipping.</p>
+<p>CaliPartner is a digital application. Access to paid features begins immediately upon successful payment confirmation.</p>
 <h2>7. Contact</h2>
-<p>For billing help email <a href="mailto:${S.email}?subject=Billing%20or%20refund">${S.email}</a> with your registered email and, if available, your order or transaction ID.</p>`,
+<p>For billing help email <a href="mailto:${S.email}?subject=Billing%20or%20refund">${S.email}</a> with your registered email and, if available, your transaction ID.</p>`,
   },
 
   "community-guidelines.html": {
@@ -228,7 +227,7 @@ module.exports.pages = (S) => ({
 </ul>
 <h2>What we may keep</h2>
 <p>Limited records needed for legal, tax, fraud-prevention or dispute purposes, such as transaction records, may be retained for the period required by law. Backups are overwritten on a rolling basis.</p>
-<div class="callout amber"><strong>Cancel your subscription first.</strong> Deleting your account does not cancel a Google Play or App Store subscription. See <a href="refund-policy.html">how to cancel</a>.</div>
+<div class="callout amber"><strong>Cancel your subscription first.</strong> Deleting your account does not cancel a Google Play, App Store, or web subscription. See <a href="refund-policy.html">how to cancel</a>.</div>
 <p>Your room partners will see that you left the room. Your streak cannot be restored after deletion.</p>`,
   },
 });
