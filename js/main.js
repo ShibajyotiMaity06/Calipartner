@@ -62,13 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Location-Based Pricing Data
+  // ---------------------------------------------------------------------------
+  // Automatic Location-Based Pricing (INR for India, USD for International)
+  // ---------------------------------------------------------------------------
+  // 1. Purge any legacy manual toggle preference or test params
+  try {
+    sessionStorage.removeItem("cp_geo_country");
+    localStorage.removeItem("cp_user_currency");
+    if (window.location.search && (window.location.search.includes("country=") || window.location.search.includes("currency="))) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  } catch (e) {}
+
+  // 2. Remove any cached badge remnants if loaded from stale cache
+  document.querySelectorAll(".location-badge, [id^='loc-badge'], .loc-switch-link").forEach((el) => el.remove());
+
   const pricingData = {
     INR: {
       symbol: "₹",
-      regionLabel: "Pricing for India (₹ INR)",
-      switchLabel: "(Switch to USD)",
-      targetCurrency: "USD",
       free: { price: "₹0", period: "forever", equiv: "Free forever for solo & pairs" },
       plus: {
         monthly: { price: "₹249", period: "/ month", equiv: "Billed monthly • 7-day free trial" },
@@ -81,9 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     USD: {
       symbol: "$",
-      regionLabel: "Pricing for International ($ USD)",
-      switchLabel: "(Switch to INR)",
-      targetCurrency: "INR",
       free: { price: "$0", period: "forever", equiv: "Free forever for solo & pairs" },
       plus: {
         monthly: { price: "$4.99", period: "/ month", equiv: "Billed monthly • 7-day free trial" },
@@ -96,83 +104,68 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Detect user location (Indian users see INR, others see USD)
-  function detectInitialCurrency() {
-    // 1. Check if user previously made an explicit choice
-    const stored = localStorage.getItem("cp_user_currency");
-    if (stored === "INR" || stored === "USD") return stored;
-
-    // 2. High-accuracy client timezone / language detection
+  // Indian device check (Kolkata/Calcutta timezone, UTC+5:30 offset -330)
+  function isIndianDevice() {
     try {
       const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "").toLowerCase();
       const offset = new Date().getTimezoneOffset(); // -330 for IST
       const lang = (navigator.languages && navigator.languages.join(",")) || navigator.language || "";
-
-      if (tz.includes("kolkata") || tz.includes("calcutta") || offset === -330 || lang.includes("-IN")) {
-        return "INR";
+      if (
+        tz.includes("kolkata") ||
+        tz.includes("calcutta") ||
+        tz.includes("asia/kolkata") ||
+        tz.includes("asia/calcutta") ||
+        offset === -330 ||
+        /-in\b/i.test(lang) ||
+        /^(hi|ta|te|bn|gu|mr|kn|ml|pa)\b/i.test(lang)
+      ) {
+        return true;
       }
     } catch (e) {}
-
-    return "USD";
+    return false;
   }
 
-  let currentCurrency = detectInitialCurrency();
+  // India is the default for CaliPartner
+  let currentCurrency = "INR";
   let currentBilling = "annual"; // Default to annual best value
 
   function updatePricingDisplay() {
     const data = pricingData[currentCurrency] || pricingData.INR;
 
-    // Update location indicator badge
-    document.querySelectorAll(".js-loc-text").forEach((el) => {
-      el.textContent = data.regionLabel;
-    });
-    document.querySelectorAll(".js-loc-switch").forEach((btn) => {
-      btn.textContent = data.switchLabel;
-      btn.setAttribute("data-target", data.targetCurrency);
-    });
-
-    // Update billing toggle buttons
+    // Update billing toggle buttons (Monthly vs Annual)
     document.querySelectorAll(".js-bill-btn").forEach((b) => {
       b.classList.toggle("active", b.getAttribute("data-billing") === currentBilling);
     });
 
-    // Update Free card
-    const freePrice = document.getElementById("price-free");
-    if (freePrice) freePrice.textContent = data.free.price;
+    // Update Free card prices
+    document.querySelectorAll("#price-free, .js-price-free").forEach((el) => {
+      el.textContent = data.free.price;
+    });
 
-    // Update Plus card
-    const plusPrice = document.getElementById("price-plus");
-    const plusPeriod = document.getElementById("period-plus");
-    const plusEquiv = document.getElementById("equiv-plus");
-    if (plusPrice && plusPeriod && plusEquiv) {
-      const p = data.plus[currentBilling];
-      plusPrice.textContent = p.price;
-      plusPeriod.textContent = p.period;
-      plusEquiv.textContent = p.equiv;
-    }
+    // Update Plus card prices
+    document.querySelectorAll("#price-plus, .js-price-plus").forEach((el) => {
+      el.textContent = data.plus[currentBilling].price;
+    });
+    document.querySelectorAll("#period-plus, .js-period-plus").forEach((el) => {
+      el.textContent = data.plus[currentBilling].period;
+    });
+    document.querySelectorAll("#equiv-plus, .js-equiv-plus").forEach((el) => {
+      el.textContent = data.plus[currentBilling].equiv;
+    });
 
-    // Update Pro card
-    const proPrice = document.getElementById("price-pro");
-    const proPeriod = document.getElementById("period-pro");
-    const proEquiv = document.getElementById("equiv-pro");
-    if (proPrice && proPeriod && proEquiv) {
-      const p = data.pro[currentBilling];
-      proPrice.textContent = p.price;
-      proPeriod.textContent = p.period;
-      proEquiv.textContent = p.equiv;
-    }
+    // Update Pro card prices
+    document.querySelectorAll("#price-pro, .js-price-pro").forEach((el) => {
+      el.textContent = data.pro[currentBilling].price;
+    });
+    document.querySelectorAll("#period-pro, .js-period-pro").forEach((el) => {
+      el.textContent = data.pro[currentBilling].period;
+    });
+    document.querySelectorAll("#equiv-pro, .js-equiv-pro").forEach((el) => {
+      el.textContent = data.pro[currentBilling].equiv;
+    });
   }
 
-  // Handle location currency toggle link
-  document.querySelectorAll(".js-loc-switch").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      currentCurrency = currentCurrency === "INR" ? "USD" : "INR";
-      try { localStorage.setItem("cp_user_currency", currentCurrency); } catch (e) {}
-      updatePricingDisplay();
-    });
-  });
-
-  // Handle billing cycle buttons (Monthly vs Annual)
+  // Handle billing cycle toggle (Monthly vs Annual)
   document.querySelectorAll(".js-bill-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       currentBilling = btn.getAttribute("data-billing") || "annual";
@@ -180,25 +173,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Initial render
+  // Ensure all pricing tier action buttons reliably navigate to app.calipartner.site
+  document.querySelectorAll(".plan-card a, .compare a.btn, a[href*='app.calipartner.site']").forEach((btn) => {
+    btn.setAttribute("href", "https://app.calipartner.site");
+    btn.setAttribute("target", "_blank");
+    btn.setAttribute("rel", "noopener noreferrer");
+  });
+
+  // Initial paint (always renders immediately as INR for zero flicker)
   updatePricingDisplay();
 
-  // Async non-blocking geo verification (if no explicit manual preference stored)
-  if (!localStorage.getItem("cp_user_currency")) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 1800);
-    fetch("https://api.country.is", { signal: controller.signal })
-      .then((r) => r.json())
-      .then((geo) => {
-        clearTimeout(timeout);
-        if (geo && geo.country) {
-          const verifiedCurrency = geo.country === "IN" ? "INR" : "USD";
-          if (verifiedCurrency !== currentCurrency) {
-            currentCurrency = verifiedCurrency;
-            updatePricingDisplay();
-          }
-        }
-      })
-      .catch(() => {});
+  // If the user's device is in India, they stay on INR 100% of the time.
+  // Only query external IP for international users whose device is NOT in India:
+  if (!isIndianDevice()) {
+    const fetchWithTimeout = async (url, timeoutMs = 2500) => {
+      const controller = new AbortController();
+      const id = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const res = await fetch(url, { signal: controller.signal });
+        clearTimeout(id);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return await res.json();
+      } catch (err) {
+        clearTimeout(id);
+        throw err;
+      }
+    };
+
+    const detectForeign = async () => {
+      try {
+        const d = await fetchWithTimeout("https://api.country.is");
+        if (d && d.country) return d.country.toUpperCase();
+      } catch (e) {}
+      try {
+        const d = await fetchWithTimeout("https://ipwho.is/");
+        if (d && d.success && d.country_code) return d.country_code.toUpperCase();
+      } catch (e) {}
+      try {
+        const d = await fetchWithTimeout("https://freeipapi.com/api/json");
+        if (d && d.countryCode) return d.countryCode.toUpperCase();
+      } catch (e) {}
+      return null;
+    };
+
+    detectForeign().then((country) => {
+      // Only switch to USD if explicitly confirmed NOT in India
+      if (country && country !== "IN") {
+        currentCurrency = "USD";
+        updatePricingDisplay();
+      }
+    });
   }
 });

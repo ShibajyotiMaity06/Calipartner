@@ -501,27 +501,8 @@ p { margin: 0; }
    Pricing Section & Toggles
    ========================================================================== */
 .pricing-controls {
-  display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 40px;
+  display: flex; justify-content: center; align-items: center; margin-bottom: 40px;
 }
-.location-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--s2); border: 1px solid var(--hairline-lit);
-  padding: 6px 18px; border-radius: var(--radius-full);
-  font-size: 13.5px; color: var(--text-mid);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-}
-.loc-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--apricot); box-shadow: 0 0 8px var(--apricot);
-}
-.loc-switch-link {
-  background: none; border: none; color: var(--apricot);
-  font-size: 13px; font-weight: 600; cursor: pointer;
-  text-decoration: underline; text-underline-offset: 3px;
-  padding: 0; margin-left: 6px; font-family: inherit;
-  transition: color 120ms var(--ease);
-}
-.loc-switch-link:hover { color: #fce7d0; }
 .toggle-group {
   display: inline-flex; background: var(--s2); border: 1px solid var(--hairline);
   padding: 4px; border-radius: var(--radius-full);
@@ -623,6 +604,11 @@ p { margin: 0; }
   background: var(--s2); color: var(--apricot); font-weight: 700;
   font-family: var(--font-display); font-size: 16px; letter-spacing: -0.01em; padding: 14px 20px;
 }
+.compare tfoot td {
+  background: var(--s2); padding: 18px 20px; border-top: 1px solid var(--hairline-lit);
+}
+.compare tfoot td:not(:first-child) { text-align: center; }
+.compare tfoot .btn { font-size: 13.5px; padding: 8px 16px; white-space: nowrap; }
 
 /* FAQ */
 .faq { max-width: 820px; margin: 0 auto; }

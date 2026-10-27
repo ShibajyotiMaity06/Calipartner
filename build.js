@@ -424,13 +424,8 @@ pages["index.html"] = layout({
       <p class="lead" style="margin-top:14px">Solo logging and 1-on-1 partner rooms are free forever. Upgrade for community power or elite AI coaching.</p>
     </div>
 
-    <!-- Location-based Pricing Controls -->
+    <!-- Billing Cycle Controls -->
     <div class="pricing-controls">
-      <div class="location-badge" id="loc-badge-home">
-        <span class="loc-dot"></span>
-        <span class="js-loc-text">Pricing for India (&#8377; INR)</span>
-        <button class="loc-switch-link js-loc-switch" type="button" aria-label="Switch Currency">(Switch to USD)</button>
-      </div>
       <div class="toggle-group" role="group" aria-label="Billing cycle selection">
         <button class="toggle-btn js-bill-btn" data-billing="monthly" type="button">Monthly</button>
         <button class="toggle-btn js-bill-btn active" data-billing="annual" type="button">Annual <span class="badge-save">Save up to 61%</span></button>
@@ -650,13 +645,8 @@ pages["pricing.html"] = layout({
   body: `${pageHead("Plans, Features &amp; Pricing", "Solo logging and 1-on-1 partner rooms are free forever. Upgrade for community power or elite AI coaching.")}
 
 <section class="section tight"><div class="wrap">
-  <!-- Location-based Pricing Controls -->
+  <!-- Billing Cycle Controls -->
   <div class="pricing-controls">
-    <div class="location-badge" id="loc-badge-pricing">
-      <span class="loc-dot"></span>
-      <span class="js-loc-text">Pricing for India (&#8377; INR)</span>
-      <button class="loc-switch-link js-loc-switch" type="button" aria-label="Switch Currency">(Switch to USD)</button>
-    </div>
     <div class="toggle-group" role="group" aria-label="Billing cycle selection">
       <button class="toggle-btn js-bill-btn" data-billing="monthly" type="button">Monthly</button>
       <button class="toggle-btn js-bill-btn active" data-billing="annual" type="button">Annual <span class="badge-save">Save up to 61%</span></button>
@@ -856,6 +846,14 @@ pages["pricing.html"] = layout({
         <tr><td>Weekly AI Progress &amp; Metabolic Summary</td><td>&mdash;</td><td>&mdash;</td><td class="y">Included</td></tr>
         <tr><td>Priority Support Queue</td><td>Standard</td><td>Standard</td><td class="y">Priority</td></tr>
       </tbody>
+      <tfoot>
+        <tr class="table-cta-row">
+          <td><strong>Choose your plan &amp; start today</strong></td>
+          <td><a class="btn btn-ghost btn-sm" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a></td>
+          <td><a class="btn btn-primary btn-sm" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Start 7-Day Free Trial</a></td>
+          <td><a class="btn btn-ghost btn-sm" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro</a></td>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </div></section>
