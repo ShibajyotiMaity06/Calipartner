@@ -224,4 +224,41 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // ---------------------------------------------------------------------------
+  // Blog Category Filtering & Share Link Copying
+  // ---------------------------------------------------------------------------
+  const filterBtns = document.querySelectorAll(".blog-filter-btn");
+  const blogCards = document.querySelectorAll(".blog-card");
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const category = btn.getAttribute("data-filter");
+
+      blogCards.forEach((card) => {
+        const cardCat = card.getAttribute("data-category");
+        if (category === "All" || cardCat === category) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+
+  const copyBtns = document.querySelectorAll(".js-copy-link");
+  copyBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const url = btn.getAttribute("data-url") || window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          const originalText = btn.textContent;
+          btn.textContent = "Copied! ✓";
+          setTimeout(() => { btn.textContent = originalText; }, 2000);
+        }).catch(() => {});
+      }
+    });
+  });
 });

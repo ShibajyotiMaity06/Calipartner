@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const legal = require("./legal");
+const blog = require("./blog");
 
 // ---- Site Configuration ----
 const SITE = {
@@ -110,6 +111,7 @@ const NAV = [
   ["index.html", "Home"],
   ["features.html", "Features"],
   ["pricing.html", "Pricing"],
+  ["blog.html", "Blog"],
   ["about.html", "About"],
   ["contact.html", "Contact"],
 ];
@@ -133,7 +135,7 @@ function comingSoonModal() {
 </div>`;
 }
 
-function layout({ file, title, desc, body }) {
+function layout({ file, title, desc, body, schema = null, ogType = "website" }) {
   const nav = NAV.map(([f, l]) => `<a href="${f}"${f === file ? ' aria-current="page"' : ""}>${l}</a>`).join("");
   return `<!DOCTYPE html>
 <html lang="en">
@@ -146,7 +148,8 @@ function layout({ file, title, desc, body }) {
 <link rel="canonical" href="${SITE.domain}/${file === "index.html" ? "" : file}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType}">
+${schema ? `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>` : ""}
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,6 +183,7 @@ ${body}
       <div><h4>Product</h4><ul>
         <li><a href="features.html">Features &amp; Specs</a></li>
         <li><a href="pricing.html">Plans &amp; Pricing</a></li>
+        <li><a href="blog.html">Blog &amp; Guides</a></li>
         <li><a href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Launch Web App</a></li>
         <li><a href="index.html#faq">Frequently Asked Questions</a></li>
         <li><a href="about.html">About CaliPartner</a></li>
@@ -922,6 +926,50 @@ pages["contact.html"] = layout({
   </form>
 </div></section>`,
 });
+
+// Blog Hub Page
+pages["blog.html"] = layout({
+  file: "blog.html",
+  title: "Fitness & Nutrition Guides | CaliPartner Journal",
+  desc: "Actionable frameworks on partner accountability, habit consistency, regional nutrition, and community fitness challenges.",
+  body: blog.indexPage(SITE, I),
+});
+
+// Blog Posts Pages
+for (const p of blog.posts) {
+  pages[p.file] = layout({
+    file: p.file,
+    title: `${p.title} | CaliPartner`,
+    desc: p.desc,
+    ogType: "article",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": p.title,
+      "description": p.desc,
+      "datePublished": p.isoDate,
+      "dateModified": p.isoDate,
+      "author": {
+        "@type": "Organization",
+        "name": p.author,
+        "url": SITE.domain,
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": SITE.name,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${SITE.domain}/assets/favicon.svg`,
+        },
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `${SITE.domain}/${p.file}`,
+      },
+    },
+    body: blog.articlePage(SITE, p, I),
+  });
+}
 
 // Legal Pages
 for (const [file, p] of Object.entries(legal.pages(SITE))) {
