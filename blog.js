@@ -3,6 +3,389 @@
 
 const posts = [
   {
+    file: "blog-why-calipartner-indian-meals.html",
+    title: "Why CaliPartner Is the Only Calorie Tracker Built for Indian Meals",
+    subtitle: "Standardizing rotis, katoris of dal, tadka oils, and AI thali scanning—finally, an app that actually understands desi home cooking.",
+    desc: "Why CaliPartner is the best calorie tracker for Indian food: native support for katoris, rotis, tadka oils, shared cooking, and AI thali scanning.",
+    category: "Indian Nutrition",
+    date: "November 2026",
+    isoDate: "2026-11-09",
+    readTime: "7 min read",
+    author: "CaliPartner Editorial Team",
+    keywords: ["why calipartner indian meals", "calorie tracker for indian food", "best app to track indian meals", "track roti dal sabzi", "indian diet calorie tracker"],
+    content: `
+<p class="lead">If you’ve ever tried using MyFitnessPal, Lose It!, or Cal AI on an authentic Indian diet, you know the frustration: search for &ldquo;1 bowl of Dal Tadka&rdquo; and you get 50 contradictory entries ranging from 90 kcal to 480 kcal. Search for &ldquo;Roti&rdquo; and you get everything from 60 calories to 240 calories with no mention of size, wheat type, or ghee.</p>
+
+<p>Most Indian fitness enthusiasts give up after two weeks because they assume an Indian diet is &ldquo;impossible to track.&rdquo; But Indian food isn&rsquo;t the problem—the problem is that Western apps were built for barcode-scannable packaged foods and solo frozen dinners. Desi meals are spiced, fluid, and cooked in shared pots for the whole family.</p>
+
+<p>Here is why CaliPartner was engineered from the ground up to be the ultimate calorie and habit tracker for Indian meals.</p>
+
+<h2>The 5 Reasons CaliPartner Solves Indian Food Tracking</h2>
+
+<h3>1. Built-in Household Measures: Katoris, Rotis &amp; Spoons</h3>
+<p>Nobody wants to pull out an industrial scale at an Indian family dinner and weigh individual spoonfuls of sabzi while everyone is eating. CaliPartner incorporates verified regional household measures:</p>
+<ul>
+  <li><strong>Standard Katoris:</strong> 1 medium steel katori (~150–180ml) calibrated for yellow dal, sambar, rajma, and chana.</li>
+  <li><strong>Phulka &amp; Roti Units:</strong> Pre-calibrated 30g dough ball phulkas (~75–85 kcal) with a simple one-tap toggle for &ldquo;with 1/2 tsp ghee (+22 kcal)&rdquo;.</li>
+  <li><strong>Tadka Spoon Measures:</strong> Quick offsets for mustard oil, ghee, and refined oils.</li>
+</ul>
+
+<h3>2. The &ldquo;Tadka Offset&rdquo; for Shared Family Cooking</h3>
+<p>The single biggest hidden calorie bomb in Indian home cooking is the oil used for the <em>tadka</em> (tempering). Spices (cumin, turmeric, garam masala) have negligible calories, but 2 tablespoons of oil add 240 kcal to the pan.</p>
+<p>In CaliPartner, you can log the total oil used in the family kadai once. The app automatically calculates your personal serving offset based on your portion of the dish. You never have to ask your mom or partner to cook a separate, bland meal.</p>
+
+<h3>3. AI Photo Food Logging Trained on Regional Thalis</h3>
+<p>Standard Western vision models fail on Indian thalis because they cannot tell the difference between yellow moong dal, kadhi, and sambar. CaliPartner&rsquo;s vision model is trained on regional Indian foods, detecting separate compartments of a thali (roti, sabzi, dal, curd, salad) and providing an instant baseline estimate you can confirm in one tap.</p>
+
+<h3>4. Shared Meals: One Person Logs, the Whole Room Eats</h3>
+<p>In Indian households, meals are shared. If your partner or family member cooks Rajma Chawal or Paneer Bhurji, they log the pot once and tag the room. You receive an instant notification, drag your portion slider (e.g. 50% or 1 katori), and your personal macros are locked in without re-entering ingredients.</p>
+
+<h3>5. High-Protein Indian Vegetarian Database</h3>
+<p>Hitting 120g to 150g of daily protein on an Indian vegetarian diet is challenging when relying on dal alone (which has a 3:1 carb-to-protein ratio). CaliPartner highlights high-density Indian protein sources in its quick-add library: low-fat paneer, soya chunks, sattu, roasted chana, Greek curd/dahi, and sprouted moong.</p>
+
+<div class="callout amber">
+  <strong>Comparison Summary:</strong> While Western apps force you to guess in grams and fight with foreign food databases, CaliPartner feels like it was designed in your home kitchen.
+</div>
+
+<h2>Start Tracking Authentic Desi Meals Today</h2>
+<p>You don't need to give up roti, dal, or family dinners to get shredded or build muscle. Experience effortless Indian food tracking on <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>.</p>
+`
+  },
+  {
+    file: "blog-personal-trainers-client-tracking.html",
+    title: "How Personal Trainers and Coaches Track Clients in CaliPartner Without Spreadsheets",
+    subtitle: "Ditch messy WhatsApp screenshots and clunky Excel sheets. Monitor client macros, workouts, and adherence in real time with private coaching rooms.",
+    desc: "Personal trainers: learn how to track client macros, workouts, and habit consistency in CaliPartner without spreadsheets or WhatsApp message clutter.",
+    category: "Coaching & Trainers",
+    date: "November 2026",
+    isoDate: "2026-11-09",
+    readTime: "8 min read",
+    author: "CaliPartner Editorial Team",
+    keywords: ["personal trainer client tracking app", "fitness coach track student macros", "track client food diary", "personal trainer app india", "client accountability tracker"],
+    content: `
+<p class="lead">If you are an independent personal trainer, gym coach, or online nutrition consultant, you already know the Sunday night routine: scrolling through 20 different WhatsApp chats, deciphering blurry screenshots of MyFitnessPal diaries, manually copying numbers into Google Sheets, and chasing clients who went dark on Thursday.</p>
+
+<p>Existing coaching platforms are bloated, cost $50 to $100 per month, and force your clients to download complicated enterprise portals they end up abandoning. CaliPartner solves this with a streamlined, social-first approach: **Private Coaching Rooms with Host Sponsorship**.</p>
+
+<h2>The 4 Biggest Headaches for Personal Trainers Today</h2>
+
+<h3>1. The WhatsApp Screenshot Chaos</h3>
+<p>Clients send food diary screenshots, meal photos, workout check-ins, and payment questions into a single endless WhatsApp thread. Finding last Tuesday&rsquo;s macro log takes five minutes of scrolling. Important client data is scattered and unsearchable.</p>
+
+<h3>2. The Client Ghosting Problem</h3>
+<p>When clients start slipping on their diet, they feel embarrassed and stop texting. By the time you notice they haven&rsquo;t checked in for 5 days, their momentum is completely lost. You need real-time, passive visibility into whether they logged their meals or closed their rings today.</p>
+
+<h3>3. Expensive Client Software</h3>
+<p>Most coaching software charges per client seat. If you have 15 students, software fees eat into your margins, or worse, your clients are hit with surprise subscription paywalls that damage trust.</p>
+
+<h3>4. Nutrition Calculations That Don't Adjust</h3>
+<p>As a client loses 5 kg or hits a weight plateau, their total daily energy expenditure (TDEE) changes. Recalculating macros manually across 15 spreadsheets is tedious and prone to human calculation errors.</p>
+
+<h2>How Trainers Use CaliPartner Rooms to Manage Clients</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coaching Task</th>
+      <th>Old Way (WhatsApp + Excel)</th>
+      <th>CaliPartner Coach Method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Client Diary Visibility</strong></td>
+      <td>Wait for manual screenshots</td>
+      <td><strong>Live side-by-side view</strong> in private room</td>
+    </tr>
+    <tr>
+      <td><strong>Client App Cost</strong></td>
+      <td>Client forced to buy premium app</td>
+      <td><strong>Host Pays (Free for client)</strong> under coach room sponsorship</td>
+    </tr>
+    <tr>
+      <td><strong>Macro Recalculation</strong></td>
+      <td>Manual spreadsheet formulas</td>
+      <td><strong>Automated weekly/monthly growth checks</strong> built on Mifflin-St Jeor</td>
+    </tr>
+    <tr>
+      <td><strong>Workout Verification</strong></td>
+      <td>Text descriptions &ldquo;did leg day&rdquo;</td>
+      <td><strong>Structured workout log</strong> attached directly to client day view</td>
+    </tr>
+    <tr>
+      <td><strong>Client Motivation</strong></td>
+      <td>Solo isolation</td>
+      <td><strong>Instant cheer nudges &amp; consistency streaks</strong> in room chat</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>The Host-Sponsorship Model: Clients Join 100% Free</h2>
+<p>CaliPartner was built with a revolutionary **Host Sponsorship** architecture:</p>
+<ul>
+  <li>As a trainer on the <strong>Plus Plan</strong> (₹249/mo or $4.99/mo), you can host up to 3 rooms with up to 5 members each.</li>
+  <li>On the <strong>Pro Plan</strong> (₹499/mo or $9.99/mo), you can host up to 5 rooms with up to 20 members per room (managing up to 100 clients).</li>
+  <li><strong>Your students pay ₹0.</strong> They join your private room via your 6-digit coach invite code and unlock full room features, chat, and diary sharing without having to purchase a subscription.</li>
+</ul>
+
+<h2>The 3-Step Coach Onboarding Protocol</h2>
+<ol>
+  <li><strong>Set Up the Client Room:</strong> Create a private 1-on-1 room (e.g. &ldquo;Coach Dave &times; Rahul&rdquo;) or a group transformation cohort room.</li>
+  <li><strong>Assign Fixed Macro Targets:</strong> Input deterministic calorie and protein floors tailored to the client's cut or bulk phase.</li>
+  <li><strong>Conduct 3-Minute Evening Audits:</strong> Open the room view before winding down. Glance at the client&rsquo;s concentric ring to verify adherence, send a cheer reaction, and drop feedback in the room chat.</li>
+</ol>
+
+<p>Elevate your coaching business and provide an elite client experience with CaliPartner. Start your coach room today at <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>.</p>
+`
+  },
+  {
+    file: "blog-intermittent-fasting-with-partner.html",
+    title: "How to Track Intermittent Fasting with an Accountability Partner (16:8 Guide)",
+    subtitle: "Synchronize your eating windows, track fasting timers side-by-side, and conquer hunger pangs together without breaking your streak.",
+    desc: "Discover how to track intermittent fasting with a partner. Learn how to sync 16:8 windows, use shared timers, manage evening cravings, and stay consistent.",
+    category: "Fasting & Habits",
+    date: "November 2026",
+    isoDate: "2026-11-09",
+    readTime: "6 min read",
+    author: "CaliPartner Editorial Team",
+    keywords: ["track fasting with partner", "intermittent fasting accountability partner", "16 8 fasting buddy", "shared fasting tracker", "fasting with friends app"],
+    content: `
+<p class="lead">Intermittent fasting (especially the popular 16:8 protocol) is one of the most effective tools for fat loss, insulin sensitivity, and digestive recovery. But anyone who has ever tried fasting alone knows the danger zone: 9:45 PM on a Tuesday night.</p>
+
+<p>You&rsquo;re sitting on the couch, bored, scrolling social media. Your brain tells you: <em>&ldquo;A handful of chips or a cookie won&rsquo;t hurt.&rdquo;</em> Because nobody is watching, you break your fast 4 hours early. Solo fasting turns every evening into an exhausting battle of willpower.</p>
+
+<p>When you fast with an accountability partner or friend group, everything shifts. Here is the science of paired fasting, and how to synchronize your fasting protocols for effortless consistency.</p>
+
+<h2>Why Solo Fasting Fails (And Why Partner Syncing Works)</h2>
+
+<p>Behavioral research demonstrates that human beings are deeply influenced by the immediate eating behaviors of those around them. If your partner or roommate is snacking, your mirror neurons make resisting food three times harder.</p>
+<p>However, when two people commit to the **same eating window**:
+<br>&bull; Neither person brings snacks into the living room after hours.
+<br>&bull; Dinner is eaten together, locking in the start of the fast at the exact same minute.
+<br>&bull; The psychological urge to snack is replaced by mutual accountability: <em>&ldquo;We both close the kitchen at 8:00 PM.&rdquo;</em></p>
+
+<h2>The 16:8 Partner Fasting Schedule</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time Window</th>
+      <th>State</th>
+      <th>What to Do Together</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>8:00 PM &ndash; 11:30 PM</strong></td>
+      <td>Fast Begins</td>
+      <td>Hydrate with water or herbal chamomile tea; lock the room diary.</td>
+    </tr>
+    <tr>
+      <td><strong>11:30 PM &ndash; 7:30 AM</strong></td>
+      <td>Overnight Sleep Fast</td>
+      <td>8 hours of deep restorative sleep (melatonin and growth hormone peak).</td>
+    </tr>
+    <tr>
+      <td><strong>7:30 AM &ndash; 12:00 PM</strong></td>
+      <td>Morning Fasting Zone</td>
+      <td>Black coffee or green tea; morning walk (8k steps); check partner timer.</td>
+    </tr>
+    <tr>
+      <td><strong>12:00 PM</strong></td>
+      <td>Breaking the Fast</td>
+      <td>High-protein, high-fiber lunch (e.g. eggs, chicken, paneer, salad).</td>
+    </tr>
+    <tr>
+      <td><strong>12:00 PM &ndash; 8:00 PM</strong></td>
+      <td>8-Hour Eating Window</td>
+      <td>Consume allocated macros across 2&ndash;3 balanced meals.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3 Rules for Managing Hunger Waves as a Team</h2>
+
+<h3>1. Understand the 20-Minute Ghrelin Peak</h3>
+<p>Hunger does not build indefinitely—it comes in waves triggered by the hormone ghrelin. A hunger spike lasts roughly 15 to 20 minutes before your body switches back to burning stored body fat. When hunger strikes, send a quick text in your room chat: <em>&ldquo;Drinking 500ml of cold water and waiting 15 minutes.&rdquo;</em> In 9 out of 10 cases, the craving vanishes.</p>
+
+<h3>2. Plain Hydration Is Non-Negotiable</h3>
+<p>During fasting, your kidneys excrete sodium and water rapidly. Mild dehydration mimics hunger pangs. Set a daily hydration floor of <strong>3.0 litres</strong>. In CaliPartner, logging water takes one tap in your room drawer, keeping both partners on pace throughout the fasting window.</p>
+
+<h3>3. Never Break a Fast with High-Glycemic Carbs</h3>
+<p>Breaking a 16-hour fast with sugary pastries, white bread, or fruit juice causes an extreme insulin spike followed by a vicious energy crash. Break your fast with protein and healthy fats (such as a paneer bhurji, grilled chicken, or eggs with avocado) to keep satiety stable.</p>
+
+<h2>How CaliPartner Syncs Your Fasting Habits</h2>
+<p>In CaliPartner, you don&rsquo;t need a separate fasting timer app. Your fasting windows, meal logging, hydration tracking, and room chat live in one integrated dashboard. Start your paired fasting journey today on <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>.</p>
+`
+  },
+  {
+    file: "blog-friend-group-workout-challenge-tracker.html",
+    title: "How Friend Groups Track Workouts and Run Fitness Challenges Together",
+    subtitle: "One app for food, lifts, steps, and water. Set up private squad rooms, weekly consistency leaderboards, and friendly competition that actually lasts.",
+    desc: "How friend groups track workouts, lifts, steps, and calories together: set up squad rooms, weekly consistency leaderboards, and safe fitness challenges.",
+    category: "Challenges & Routines",
+    date: "November 2026",
+    isoDate: "2026-11-09",
+    readTime: "8 min read",
+    author: "CaliPartner Editorial Team",
+    keywords: ["friend group workout tracker", "fitness challenge with friends app", "group workout accountability", "squad fitness challenge", "friend group calorie tracking"],
+    content: `
+<p class="lead">Every friend group has had the &ldquo;Let&rsquo;s get shredded together&rdquo; conversation. You make a WhatsApp group, declare ambitious goals, and promise to hit the gym 6 days a week. By day 12, someone misses three workouts, stops checking the chat out of guilt, the group goes quiet, and the entire challenge falls apart.</p>
+
+<p>Why do 90% of friend group fitness challenges fail? Because the experience is fragmented across four different apps: one person tracks runs on Strava, another logs food on MyFitnessPal, a third shares Apple Watch rings, and nobody has a unified view of who is actually showing up every day.</p>
+
+<p>Here is the proven framework to organize, track, and win fitness challenges with your friend squad in one unified app.</p>
+
+<h2>The 4 Pillars of a Successful Squad Challenge</h2>
+
+<h3>1. A Single Unified Hub (No Fragmented Apps)</h3>
+<p>If your friends have to check WhatsApp for chat, MyFitnessPal for food, and another app for workouts, compliance drops by 60%. A squad room must track **food, water, steps, lifting sessions, and chat** on a single unified screen.</p>
+
+<h3>2. Consistency Scoring over Extreme Restriction</h3>
+<p>Traditional fitness challenges make the fatal mistake of ranking people by &ldquo;most weight lost&rdquo; or &ldquo;lowest calories eaten.&rdquo; This encourages dangerous dehydration, extreme starvation, and inevitable rebound weight gain.
+<br>In CaliPartner, squad leaderboards are ranked by **consecutive goal adherence**:
+<br>&bull; Did you hit within &plusmn;5% of your personal caloric target?
+<br>&bull; Did you reach your daily 8,000-step floor?
+<br>&bull; Did you log your workout?
+<br>Everyone plays by their own personal rules, making the competition fair and sustainable.</p>
+
+<h3>3. The 30-Day Protected Grace State</h3>
+<p>Life happens: someone gets the flu, travels for work, or attends a wedding. In solo apps, a broken streak feels like a total reset, causing people to give up completely. In CaliPartner squad rooms, if a member misses a day, the room enters a protected grace state, keeping streaks alive and rallying the squad to help them recover.</p>
+
+<h3>4. Private, High-Signal Squad Chat</h3>
+<p>Fitness accountability dies in regular messaging apps because check-ins get buried under memes and political debates. A dedicated room chat keeps the focus 100% on high-signal encouragement: post-workout pump photos, healthy meal scans, and motivational nudges.</p>
+
+<h2>Sample 30-Day Squad Challenge Point Matrix</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Daily Habit</th>
+      <th>Standard Target</th>
+      <th>Squad Points Awarded</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Nutrition Target</strong></td>
+      <td>Calories within &plusmn;5% &amp; protein floor met</td>
+      <td><strong>+3 Points</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Workout Logged</strong></td>
+      <td>45+ min lifting or cardio session</td>
+      <td><strong>+3 Points</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Step Goal</strong></td>
+      <td>8,000+ verified daily steps</td>
+      <td><strong>+2 Points</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Hydration Floor</strong></td>
+      <td>2.5L to 3.5L tracked water</td>
+      <td><strong>+2 Points</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Total Possible</strong></td>
+      <td>Perfect daily discipline</td>
+      <td><strong>10 Points / Day</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>How to Launch Your Squad Room in CaliPartner</h2>
+<ol>
+  <li><strong>Choose a Host:</strong> One member hosts the room on the Plus or Pro plan. All invited friends join for free.</li>
+  <li><strong>Set Squad Capacity:</strong> Add up to 5 friends on Plus, or up to 20 friends on Pro for larger gym squads or running clubs.</li>
+  <li><strong>Inspect Side-by-Side Progress:</strong> Swipe between members to celebrate high streaks and nudge anyone who hasn't logged their water.</li>
+  <li><strong>Crown the Weekly Winner:</strong> Celebrate the most consistent member every Sunday evening!</li>
+</ol>
+
+<p>Stop doing fitness alone. Gather your squad and start your private room today on <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>.</p>
+`
+  },
+  {
+    file: "blog-couples-fitness-boyfriend-girlfriend-guide.html",
+    title: "Boyfriend & Girlfriend Fitness Tracking: How to Build Healthy Habits as a Couple",
+    subtitle: "From gym dates to shared meal prep: how couples double their consistency without toxic calorie comparisons or relationship friction.",
+    desc: "The complete guide to boyfriend and girlfriend fitness tracking: shared date night meals, gym dates, goal-relative calories, and healthy relationship habits.",
+    category: "Couples & Relationships",
+    date: "November 2026",
+    isoDate: "2026-11-09",
+    readTime: "7 min read",
+    author: "CaliPartner Editorial Team",
+    keywords: ["boyfriend girlfriend fitness tracking", "couple fitness app", "workout with girlfriend", "calorie tracking for couples", "bf and gf diet accountability"],
+    content: `
+<p class="lead">Couples who train and eat together don&rsquo;t just build better physiques—they build stronger relationships. Studies in health psychology show that when one partner adopts a healthy habit, the second partner is **five times more likely** to succeed.</p>
+
+<p>However, when a boyfriend and girlfriend try to diet together using traditional solo apps, friction often follows. Different caloric needs, uneven cooking responsibilities, and awkward calorie comparisons can turn what should be romantic companionship into stressful competition.</p>
+
+<p>Here is how to navigate the boyfriend &amp; girlfriend fitness dynamic, eliminate relationship tension around food, and turn getting in shape into your favorite shared hobby.</p>
+
+<h2>The Biological Reality: Why His &amp; Her Diets Look Different</h2>
+
+<p>The single biggest mistake couples make is trying to eat the exact same calories. A 6'0&quot; boyfriend weighing 82 kg might have a maintenance baseline of 2,700 kcal, while a 5'4&quot; girlfriend weighing 58 kg might maintain at 1,750 kcal.</p>
+<ul>
+  <li>If the girlfriend tries to match the boyfriend&rsquo;s dinner portions, she will quickly enter a caloric surplus and gain unwanted fat.</li>
+  <li>If the boyfriend tries to eat tiny diet portions with his girlfriend, his energy will plummet, testosterone drops, and he loses lean muscle mass.</li>
+</ul>
+
+<div class="callout amber">
+  <strong>The Solution:</strong> In CaliPartner, you never compare raw calories. The &ldquo;Two Halves, One Seam&rdquo; dashboard scores each person on their <em>percentage of personal goal</em>. When both partners hit 95%, both rings fill equally!
+</div>
+
+<h2>3 Game-Changing Habits for Fitness Couples</h2>
+
+<h3>1. The Shared Meal Prep System</h3>
+<p>Cooking two completely different meals every night is a recipe for relationship burnout. Instead, cook the **same protein and vegetable base**, and adjust carb portions on your plates:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Meal Component</th>
+      <th>Boyfriend Portion (Bulk/Maintain)</th>
+      <th>Girlfriend Portion (Lean Cut)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Chicken or Paneer Base</strong></td>
+      <td>250g grilled protein (~55g P)</td>
+      <td>150g grilled protein (~35g P)</td>
+    </tr>
+    <tr>
+      <td><strong>Vegetable Stir-Fry / Salad</strong></td>
+      <td>1 full bowl (fiber &amp; micronutrients)</td>
+      <td>1 full bowl (high volume, low calorie)</td>
+    </tr>
+    <tr>
+      <td><strong>Carbohydrate (Rice/Roti)</strong></td>
+      <td>2 cups rice or 3 rotis (~300 kcal)</td>
+      <td>1 cup rice or 1 roti (~150 kcal)</td>
+    </tr>
+    <tr>
+      <td><strong>Logging in CaliPartner</strong></td>
+      <td>Logs 60% portion in shared drawer</td>
+      <td>Logs 40% portion in shared drawer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2. Replace Passive Dates with Active Gym Dates</h3>
+<p>Sitting in a movie theater with a bucket of buttery popcorn doesn&rsquo;t bring you closer together. Swapping one weekend dinner date for an active date transforms your lifestyle:
+<br>&bull; Hit a Saturday morning lifting session together and grab post-workout protein smoothies.
+<br>&bull; Go on an evening 8,000-step walking date to decompress from the workday.
+<br>&bull; Try indoor bouldering, tennis, or hiking together.</p>
+
+<h3>3. Use Room Cheers Instead of Constant Nagging</h3>
+<p>Nobody likes feeling micromanaged by their partner. Asking <em>&ldquo;Did you drink your water? Did you log your lunch?&rdquo;</em> can feel like nagging.
+<br>In CaliPartner, accountability is playful: send a one-tap ⚡ Cheer or emoji reaction through your private room. When both of you log your day, the central seam fuses into a glowing light—a quiet, private celebration of mutual discipline.</p>
+
+<h2>Start Your Couples Journey on CaliPartner</h2>
+<p>Companionship beats competition every single time. Start your private 1-on-1 partner room for free today at <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>.</p>
+`
+  },
+  {
     file: "blog-track-macros-with-gym-partner.html",
     title: "How to Track Macros with a Gym Partner: The Complete Blueprint",
     subtitle: "The complete system for syncing protein targets, managing different caloric goals (cutting vs bulking), and using accountability to never skip a meal log.",
@@ -69,7 +452,7 @@ const posts = [
 </table>
 
 <h3>3. Establish Daily Evening Check-Ins</h3>
-<p>Quiet days breed missed logs. In CaliPartner, you and your gym partner share a private room. At 9:30 PM each night, both members should open the room view. Seeing your partner’s completed macro ring lights up a psychological cue: <em>"My partner showed up today. I need to close my day too."</em></p>
+<p>Quiet days breed missed logs. In CaliPartner, you and your gym partner share a private room. At 9:30 PM each night, both members should open the room view. Seeing your partner’s completed macro ring lights up a psychological cue: <em>&ldquo;My partner showed up today. I need to close my day too.&rdquo;</em></p>
 
 <h2>Handling Social Outings and Cheat Meals as a Team</h2>
 <p>Social dining is where solo lifters fall off track. When you and your gym partner go out for weekend meals or celebrate post-workout:</p>
@@ -84,7 +467,7 @@ const posts = [
 <ul>
   <li><strong>Step 1:</strong> Open the <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">CaliPartner Web App</a>.</li>
   <li><strong>Step 2:</strong> Calculate your individual calories and macros using our built-in deterministic Mifflin-St Jeor formula.</li>
-  <li><strong>Step 3:</strong> Tap <em>"Create Room"</em>, select <em>Gym Buddies</em>, and send your partner your 6-digit invite code.</li>
+  <li><strong>Step 3:</strong> Tap <em>&ldquo;Create Room&rdquo;</em>, select <em>Gym Buddies</em>, and send your partner your 6-digit invite code.</li>
   <li><strong>Step 4:</strong> Watch the central seam fuse each evening when both of you lock in your daily nutrition!</li>
 </ul>
 `
@@ -135,7 +518,7 @@ const posts = [
     <tr>
       <td><strong>Accountability Model</strong></td>
       <td>Solo silo (isolated tracking)</td>
-      <td><strong>Private Paired Rooms</strong> ("Two Halves, One Seam")</td>
+      <td><strong>Private Paired Rooms</strong> (&ldquo;Two Halves, One Seam&rdquo;)</td>
     </tr>
     <tr>
       <td><strong>Comparison Metric</strong></td>
@@ -175,7 +558,7 @@ const posts = [
   </tbody>
 </table>
 
-<h2>Why "Shared Rooms" Change Everything</h2>
+<h2>Why &ldquo;Shared Rooms&rdquo; Change Everything</h2>
 <p>In CaliPartner, the centerpiece of your experience is the <strong>Room screen</strong>. When you pair with your partner or gym buddy, you see two concentric rings and two balanced columns:</p>
 <ul>
   <li><strong>Your identity hue (Iris)</strong> reflects your daily progress against your personal target.</li>
@@ -201,7 +584,7 @@ const posts = [
     author: "CaliPartner Editorial Team",
     keywords: ["winter arc group challenge tracker", "winter arc challenge tracker", "winter arc rules", "winter fitness challenge with friends", "group accountability tracker"],
     content: `
-<p class="lead">Every year from October 1st to January 1st, the majority of the world goes into hibernation. People skip morning workouts because it’s dark outside, indulge in holiday buffets, and promise themselves: <em>"I'll start fresh in the New Year."</em> The Winter Arc is the radical rejection of that mindset: you lock in when it’s hardest, building an unbreakable physical and mental foundation before the rest of the world even makes a New Year's resolution.</p>
+<p class="lead">Every year from October 1st to January 1st, the majority of the world goes into hibernation. People skip morning workouts because it’s dark outside, indulge in holiday buffets, and promise themselves: <em>&ldquo;I'll start fresh in the New Year.&rdquo;</em> The Winter Arc is the radical rejection of that mindset: you lock in when it’s hardest, building an unbreakable physical and mental foundation before the rest of the world even makes a New Year's resolution.</p>
 
 <p>Running the Winter Arc alone is notoriously brutal. Cold weather, shorter daylight hours, and holiday parties will test your willpower daily. But when you track your Winter Arc inside a <strong>private squad room</strong>, giving up ceases to be an option.</p>
 
@@ -356,13 +739,13 @@ const posts = [
   <strong>Pro-Tip for Fitness Couples:</strong> Keep the protein and carb sources separate when serving. The partner on a cut can take 200g protein with 100g carbs, while the partner on a bulk can take 200g protein with 300g carbs. Same dinner, tailored macros!
 </div>
 
-<h2>How CaliPartner's "Shared Meals" Automates Logging</h2>
+<h2>How CaliPartner's &ldquo;Shared Meals&rdquo; Automates Logging</h2>
 
 <p>Traditional apps force both people to open their phones and manually enter 8 different ingredients. CaliPartner was engineered to solve this exact problem natively:</p>
 
 <ul>
-  <li><strong>Cook Once, Log Once:</strong> Whoever cooks creates the meal in their diary and taps <em>"Tag in Room"</em>.</li>
-  <li><strong>One-Tap Notification:</strong> Your partner receives an instant nudge in their room feed: <em>"Priya logged Dinner (Chicken Rice Stir-Fry)"</em>.</li>
+  <li><strong>Cook Once, Log Once:</strong> Whoever cooks creates the meal in their diary and taps <em>&ldquo;Tag in Room&rdquo;</em>.</li>
+  <li><strong>One-Tap Notification:</strong> Your partner receives an instant nudge in their room feed: <em>&ldquo;Priya logged Dinner (Chicken Rice Stir-Fry)&rdquo;</em>.</li>
   <li><strong>Custom Portion Slider:</strong> Your partner taps the notification and drags a portion slider (e.g., 40% or 50%). Their diary is instantly populated with their exact macro breakdown.</li>
   <li><strong>Zero Double Entry:</strong> No duplicate scanning, no forgotten ingredients, and no friction after a long day of work.</li>
 </ul>
@@ -375,7 +758,7 @@ const posts = [
     title: "Best Fitness & Calorie Tracker App for Couples (2026 Guide)",
     subtitle: "Why 80% of solo diet resolutions fail, and how side-by-side tracking with your partner doubles long-term consistency without toxic comparisons.",
     desc: "Most calorie trackers are built for one person and cause awkward comparisons. Discover how side-by-side tracking with your partner doubles consistency without unhealthy competition.",
-    category: "Couples & Accountability",
+    category: "Couples & Relationships",
     date: "November 2026",
     isoDate: "2026-11-01",
     readTime: "6 min read",
@@ -390,8 +773,8 @@ const posts = [
 
 <h2>The 3 Reasons Traditional Apps Fail Couples</h2>
 
-<h3>1. The "Raw Calorie" Comparison Trap</h3>
-<p>Imagine a couple where Partner A is 6'1" and bulking on 3,100 kcal, while Partner B is 5'3" and cutting on 1,600 kcal. In traditional apps like MyFitnessPal or Lose It!, if you look at each other's diaries, raw numbers create cognitive dissonance. Partner B feels like they're starving, while Partner A feels like they're overeating.</p>
+<h3>1. The &ldquo;Raw Calorie&rdquo; Comparison Trap</h3>
+<p>Imagine a couple where Partner A is 6'1&quot; and bulking on 3,100 kcal, while Partner B is 5'3&quot; and cutting on 1,600 kcal. In traditional apps like MyFitnessPal or Lose It!, if you look at each other's diaries, raw numbers create cognitive dissonance. Partner B feels like they're starving, while Partner A feels like they're overeating.</p>
 <p>Comparing raw calories between two bodies with different heights, basal metabolic rates (BMR), and goals is biologically meaningless. What matters is <em>consistency relative to your own target</em>.</p>
 
 <h3>2. The Double Data-Entry Headache</h3>
@@ -404,7 +787,7 @@ const posts = [
   <strong>Key Takeaway:</strong> Fitness companionship should not mean copying each other's diets. It means looking at the same dashboard, celebrating consistency, and sharing meal prep without extra work.
 </div>
 
-<h2>The 4 Pillars of a Real "Couple-First" Tracker</h2>
+<h2>The 4 Pillars of a Real &ldquo;Couple-First&rdquo; Tracker</h2>
 
 <p>When selecting or using a paired tracker, look for these non-negotiable features:</p>
 
@@ -430,7 +813,7 @@ const posts = [
     <tr>
       <td><strong>Dashboard</strong></td>
       <td>Single solo dial</td>
-      <td><strong>Side-by-side rings</strong> ("Two Halves, One Seam" display)</td>
+      <td><strong>Side-by-side rings</strong> (&ldquo;Two Halves, One Seam&rdquo; display)</td>
     </tr>
     <tr>
       <td><strong>Communication</strong></td>
@@ -451,13 +834,13 @@ const posts = [
   <li>If Partner A eats 2,800 out of 3,100 kcal, their ring is at <strong>90%</strong>.</li>
   <li>If Partner B eats 1,440 out of 1,600 kcal, their ring is also at <strong>90%</strong>.</li>
 </ul>
-<p>When you sit down for dinner, you can glance at the app and immediately see: <em>"We both crushed today."</em> There is zero toxic comparison, zero calorie-shaming, and 100% mutual encouragement.</p>
+<p>When you sit down for dinner, you can glance at the app and immediately see: <em>&ldquo;We both crushed today.&rdquo;</em> There is zero toxic comparison, zero calorie-shaming, and 100% mutual encouragement.</p>
 
 <h2>How to Start Tracking With Your Partner (7-Day Kickoff)</h2>
 <ol>
   <li><strong>Agree on Your Individual Goals:</strong> Calculate your baseline calorie and macronutrient targets based on science, not vanity. One person can cut while the other maintains or bulks.</li>
-  <li><strong>Create Your Shared Room:</strong> Sign in to <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">CaliPartner Web App</a>, tap "Create Room", and send your partner their one-tap invite link or 6-digit code.</li>
-  <li><strong>Establish Shared Meal Rules:</strong> When one of you cooks, that person logs the meal and tags the other. The second person simply taps "Log Portion" (e.g. 50%, 40%, 60%).</li>
+  <li><strong>Create Your Shared Room:</strong> Sign in to <a href="https://app.calipartner.site" target="_blank" rel="noopener noreferrer">CaliPartner Web App</a>, tap &ldquo;Create Room&rdquo;, and send your partner their one-tap invite link or 6-digit code.</li>
+  <li><strong>Establish Shared Meal Rules:</strong> When one of you cooks, that person logs the meal and tags the other. The second person simply taps &ldquo;Log Portion&rdquo; (e.g. 50%, 40%, 60%).</li>
   <li><strong>Set an Evening Check-In Habit:</strong> Before winding down, check the room view together. Did both of you hit your water and step floors? Send a quick celebratory reaction in room chat.</li>
 </ol>
 `
@@ -467,16 +850,16 @@ const posts = [
     title: "How to Track Calories in Homemade Indian Food Without Losing Your Mind",
     subtitle: "Roti, dal, sabzi, ghee, and dining out: the definitive guide to accurate macro tracking on an Indian diet with household measures.",
     desc: "Roti, dal, sabzi, ghee, and dining out: the definitive guide to accurate macro tracking on an Indian diet with household measures and shared cooking.",
-    category: "Nutrition & Diets",
+    category: "Indian Nutrition",
     date: "November 2026",
     isoDate: "2026-11-07",
     readTime: "8 min read",
     author: "CaliPartner Editorial Team",
     keywords: ["track calories indian food", "roti calories macro", "dal protein calories", "indian calorie tracker app", "katori portion size macros"],
     content: `
-<p class="lead">If you've ever tried logging a standard home-cooked Indian meal into a Western calorie tracker, you know the frustration: search for "1 bowl of Dal Tadka" and you'll find 50 different entries ranging from 90 kcal to 480 kcal. Search for "Roti" and you get everything from 60 calories to 220 calories with no explanation of size or flour type.</p>
+<p class="lead">If you've ever tried logging a standard home-cooked Indian meal into a Western calorie tracker, you know the frustration: search for &ldquo;1 bowl of Dal Tadka&rdquo; and you'll find 50 different entries ranging from 90 kcal to 480 kcal. Search for &ldquo;Roti&rdquo; and you get everything from 60 calories to 220 calories with no explanation of size or flour type.</p>
 
-<p>Most people give up after two weeks because they assume an Indian diet is "impossible to track." But the issue isn't Indian food—it's that Western apps were built for pre-packaged, barcode-scannable meals. Homemade Indian cooking is fluid, spiced, and shared across families.</p>
+<p>Most people give up after two weeks because they assume an Indian diet is &ldquo;impossible to track.&rdquo; But the issue isn't Indian food—it's that Western apps were built for pre-packaged, barcode-scannable meals. Homemade Indian cooking is fluid, spiced, and shared across families.</p>
 
 <p>Here is the proven, simple framework to track Indian meals accurately, maintain sanity, and hit your fitness goals without cooking separate food from your family.</p>
 
@@ -496,7 +879,7 @@ const posts = [
 </ul>
 <p>If you brush each roti with 1/2 teaspoon of ghee, add <strong>22 kcal (2.5g fat)</strong> per roti. Tracking by roti count rather than gram weight is 95% as accurate and takes 3 seconds.</p>
 
-<h3>Rule 3: The "Tadka Offset" Method</h3>
+<h3>Rule 3: The &ldquo;Tadka Offset&rdquo; Method</h3>
 <p>The biggest hidden source of calories in Indian cuisine is the cooking oil or ghee used for tadka (tempering). Spices (cumin, turmeric, coriander, chilli powder) have negligible calories. The oil does not.</p>
 <p><strong>How to track shared pots:</strong> Ask whoever is cooking how much oil was used for the entire dish. For example:
 <br>&bull; 2 tablespoons of mustard oil = ~240 kcal.
