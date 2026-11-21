@@ -456,9 +456,9 @@ pages["index.html"] = layout({
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Food, water, steps, workouts &amp; weight trends</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>70k+ Indian food database &amp; barcode scan</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Standard avatar base &amp; wardrobe custom styling</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Workout logging &amp; <strong>calendar consistency indicator dot</strong></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Send &amp; read room text chat</strong> &amp; cheer nudges</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>On-demand manual macro recalculation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>3 one-time AI Photo food scans</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>100% offline-first SQLite logging</span></li>
         </ul>
         <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a>
       </div>
@@ -481,10 +481,10 @@ pages["index.html"] = layout({
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> all invited members join &amp; participate 100% free</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Generate your own AI Body Avatar from your photo</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Progress Pictures weekly &amp; monthly transformation journey</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Workout Calendar visual indicator dot</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Flexible Monthly AI Pools:</strong> 465 AI Coach chats &amp; 248 AI meal scans</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Reviews (7d)</strong> &amp; metabolic macro recalculations</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Send &amp; read room text chat, photo/video sharing, focus rooms &amp; 150+ recipes</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>150+ Recipe library</strong> &amp; &ldquo;Fits My Day&rdquo; AI collections</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Room photo &amp; video sharing, live focus rooms &amp; seasonal challenges</span></li>
         </ul>
         <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro &rarr;</a>
       </div>
@@ -568,7 +568,7 @@ pages["features.html"] = layout({
         <li><strong>Two Halves, One Seam:</strong> You on the left, your partner on the right.</li>
         <li><strong>Percent, Not Calories:</strong> Comparisons based on % of individual goal achieved.</li>
         <li><strong>Identity Hues:</strong> Iris (Person A) and Teal (Person B)—never green for winning or red for losing.</li>
-        <li><strong>Room Text Chat:</strong> Read-only on Free; Send &amp; Read on Pro.</li>
+        <li><strong>Room Text Chat:</strong> Full send &amp; read messaging, cheer nudges, and workout logs included free for all rooms.</li>
         <li><strong>Room Media Sharing:</strong> Share photos and workout videos (Pro exclusive).</li>
         <li><strong>Live Shared Focus Sessions:</strong> Study or work simultaneously with peers.</li>
         <li><strong>Room-Only Leaderboard:</strong> Filtered cohort ranks for just your room members.</li>
@@ -655,13 +655,13 @@ pages["pricing.html"] = layout({
       <ul class="plan-features">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>1 hosted pair room</strong> (up to 2 people)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Free 1-on-1 partner room</strong> included forever</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Full food, water, steps, workout &amp; weight diary</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Food, water, steps, workouts &amp; weight trends</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>70k+ Indian food database &amp; barcode scanner</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Standard avatar base &amp; wardrobe custom styling</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Workout logging &amp; <strong>calendar consistency indicator dot</strong></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Send &amp; read room text chat</strong> &amp; cheer nudges</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Basic room nutrition sharing (cals, protein, carbs)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>On-demand manual macro recalculation</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>3 one-time AI Photo food scans</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>100% offline-first SQLite logging</span></li>
       </ul>
       <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a>
     </div>
@@ -684,10 +684,10 @@ pages["pricing.html"] = layout({
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> all invited members join &amp; participate 100% free</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Generate your own AI Body Avatar from your photo</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Progress Pictures weekly &amp; monthly transformation journey</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Workout Calendar visual indicator dot</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Flexible Monthly AI Pools:</strong> 465 AI Coach chats &amp; 248 AI meal scans</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Reviews (7d)</strong> &amp; metabolic macro recalculations</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Send &amp; read room text chat, photo/video sharing, focus rooms &amp; 150+ recipes</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>150+ Recipe library</strong> &amp; &ldquo;Fits My Day&rdquo; AI collections</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Room photo &amp; video sharing, live focus rooms &amp; seasonal challenges</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Priority customer support queue</span></li>
       </ul>
       <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro &rarr;</a>
@@ -830,7 +830,16 @@ pages["pricing.html"] = layout({
           <strong>Workout Calendar visual indicator dot</strong>
           <span>Accent indicator dot under logged workout days on monthly calendar</span>
         </div>
-        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Send &amp; read room text chat</strong>
+          <span>Full private communication, cheers, and workout logs</span>
+        </div>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
       </div>
 
@@ -865,15 +874,6 @@ pages["pricing.html"] = layout({
         <div class="col-feature">
           <strong>Weekly AI Growth Reviews &amp; macro recalculation</strong>
           <span>7-day rolling adherence &amp; metabolic analysis preventing plateaus</span>
-        </div>
-        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
-        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
-      </div>
-
-      <div class="compare-row">
-        <div class="col-feature">
-          <strong>Send &amp; read room text chat</strong>
-          <span>Full private communication, cheers, and workout logs</span>
         </div>
         <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
