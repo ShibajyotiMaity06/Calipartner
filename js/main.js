@@ -81,25 +81,19 @@ document.addEventListener("DOMContentLoaded", () => {
     INR: {
       symbol: "₹",
       free: { price: "₹0", period: "forever", equiv: "Free forever for solo & pairs" },
-      plus: {
-        monthly: { price: "₹249", period: "/ month", equiv: "Billed monthly • 7-day free trial" },
-        annual: { price: "₹1,499", period: "/ year", equiv: "₹125 / month • ~50% savings (₹1,489 saved)" }
-      },
       pro: {
-        monthly: { price: "₹499", period: "/ month", equiv: "Billed monthly • Immediate billing" },
-        annual: { price: "₹2,499", period: "/ year", equiv: "₹192 / month • ~58% savings (₹3,209 saved)" }
+        quarterly: { price: "₹899", period: "/ 3 months", equiv: "₹299 / month • Taxes inclusive" },
+        semiannual: { price: "₹1,599", period: "/ 6 months", equiv: "₹266 / month • Save ~40% (Taxes incl.)" },
+        annual: { price: "₹2,499", period: "/ year", equiv: "₹208 / month • Best Value (Save ~58%)" }
       }
     },
     USD: {
       symbol: "$",
       free: { price: "$0", period: "forever", equiv: "Free forever for solo & pairs" },
-      plus: {
-        monthly: { price: "$4.99", period: "/ month", equiv: "Billed monthly • 7-day free trial" },
-        annual: { price: "$29.99", period: "/ year", equiv: "$2.33 / month • ~53% savings ($31.89 saved)" }
-      },
       pro: {
-        monthly: { price: "$9.99", period: "/ month", equiv: "Billed monthly • Immediate billing" },
-        annual: { price: "$49.00", period: "/ year", equiv: "$3.92 / month • ~61% savings ($72.88 saved)" }
+        quarterly: { price: "$18.99", period: "/ 3 months", equiv: "$6.33 / month • Taxes inclusive" },
+        semiannual: { price: "$32.99", period: "/ 6 months", equiv: "$5.50 / month • Save ~40% (Taxes incl.)" },
+        annual: { price: "$49.99", period: "/ year", equiv: "$4.17 / month • Best Value (Save ~58%)" }
       }
     }
   };
@@ -132,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function updatePricingDisplay() {
     const data = pricingData[currentCurrency] || pricingData.INR;
 
-    // Update billing toggle buttons (Monthly vs Annual)
+    // Update billing toggle buttons (Quarterly, Semi-Annual, Annual)
     document.querySelectorAll(".js-bill-btn").forEach((b) => {
       b.classList.toggle("active", b.getAttribute("data-billing") === currentBilling);
     });
@@ -142,30 +136,21 @@ document.addEventListener("DOMContentLoaded", () => {
       el.textContent = data.free.price;
     });
 
-    // Update Plus card prices
-    document.querySelectorAll("#price-plus, .js-price-plus").forEach((el) => {
-      el.textContent = data.plus[currentBilling].price;
-    });
-    document.querySelectorAll("#period-plus, .js-period-plus").forEach((el) => {
-      el.textContent = data.plus[currentBilling].period;
-    });
-    document.querySelectorAll("#equiv-plus, .js-equiv-plus").forEach((el) => {
-      el.textContent = data.plus[currentBilling].equiv;
-    });
-
     // Update Pro card prices
-    document.querySelectorAll("#price-pro, .js-price-pro").forEach((el) => {
-      el.textContent = data.pro[currentBilling].price;
-    });
-    document.querySelectorAll("#period-pro, .js-period-pro").forEach((el) => {
-      el.textContent = data.pro[currentBilling].period;
-    });
-    document.querySelectorAll("#equiv-pro, .js-equiv-pro").forEach((el) => {
-      el.textContent = data.pro[currentBilling].equiv;
-    });
+    if (data.pro && data.pro[currentBilling]) {
+      document.querySelectorAll("#price-pro, .js-price-pro").forEach((el) => {
+        el.textContent = data.pro[currentBilling].price;
+      });
+      document.querySelectorAll("#period-pro, .js-period-pro").forEach((el) => {
+        el.textContent = data.pro[currentBilling].period;
+      });
+      document.querySelectorAll("#equiv-pro, .js-equiv-pro").forEach((el) => {
+        el.textContent = data.pro[currentBilling].equiv;
+      });
+    }
   }
 
-  // Handle billing cycle toggle (Monthly vs Annual)
+  // Handle billing cycle toggle (Quarterly vs 6-Month vs Annual)
   document.querySelectorAll(".js-bill-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       currentBilling = btn.getAttribute("data-billing") || "annual";

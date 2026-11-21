@@ -292,12 +292,12 @@ const V = {
 };
 
 const showcase = [
-  ["rooms", "Rooms for 2 to 20 people", "Partners, gym buddies or your transformation squad. Invite by @username, link or code. The room host's plan covers the room, and invited members join free."],
+  ["rooms", "Host rooms for your squads &amp; friends", "Partners, gym buddies or your transformation squad with unlimited members. Invite by @username, link or code. The room host's plan covers the room, and invited members join free."],
   ["food", "Logging that takes seconds", "Search over 70,000 foods (IFCT Indian foods first), barcode scan, AI photo estimate, custom foods and one-tap re-log of recurring meals. Works 100% offline."],
-  ["chat", "A private chat for your room", "Send text, cheer each other on, and share photos & videos (Pro). No public feed, no algorithm, and no messages from strangers."],
-  ["workout", "Workouts in the same app", "Log strength, cardio and sports with sets, reps and weights. Track personal records (PRs), auto-rest countdowns, and share routines with your room."],
+  ["chat", "A private chat for your room", "Send text, cheer each other on, and share photos &amp; videos (Pro). No public feed, no algorithm, and no messages from strangers."],
+  ["workout", "Workouts with calendar consistency", "Log strength, cardio and sports with sets, reps, weights and PRs. Visual indicator dots on your calendar highlight every workout day at a glance."],
   ["water", "Water, steps and fasting", "Track water with smart reminders, sync steps from Apple Health or Health Connect, and log intermittent fasting windows (16:8, 18:6)."],
-  ["chart", "Adaptive progress & growth checks", "Weight moving averages, macro compliance, and scheduled macro recalculations (monthly on Plus, weekly on Pro) that prevent plateaus."],
+  ["chart", "Adaptive progress &amp; growth checks", "Weight moving averages, private transformation photo journey, and weekly AI macro recalculations that prevent plateaus."],
 ];
 const showcaseHtml = showcase.map(([v, t, p], i) => `<div class="feat-row${i % 2 ? " flip" : ""}"><div class="feat-text"><h3>${t}</h3><p>${p}</p></div>${V[v]}</div>`).join("");
 
@@ -325,7 +325,7 @@ pages["index.html"] = layout({
         ${stores}
         <div class="hero-note">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg>
-          <span>Free 1-on-1 partner rooms included forever &bull; 7-day free trial on Plus</span>
+          <span>Free 1-on-1 partner rooms included forever &bull; All taxes included on Pro</span>
         </div>
       </div>
     </div>
@@ -365,7 +365,7 @@ pages["index.html"] = layout({
       <h2>Goals change as you progress. Your targets should too.</h2>
       <p class="lead" style="margin-top:14px">As you lose body fat or gain muscle, your Total Daily Energy Expenditure (TDEE) and metabolism shift. CaliPartner provides scheduled, proactive growth reviews so you never hit an unexplained plateau.</p>
       <ul class="checks">
-        <li><span><b>Plus Plan: Monthly Growth Review (30 Days).</b> Analyzes your 30-day weight trend and consistency to recompute calories and macros for the upcoming month.</span></li>
+        <li><span><b>Free Tier: On-Demand Manual Recalculation.</b> Re-trigger baseline calorie and macro target calculations anytime from settings based on your updated weight.</span></li>
         <li><span><b>Pro Plan: Weekly AI Coach Review (7 Days).</b> The AI Coach checks your 7-day rolling weight average, workout volume, and adherence to recommend refined macro distributions.</span></li>
         <li><span><b>Strict Safety Floors Enforced.</b> Calorie minimums (1,200 kcal women, 1,500 kcal men) and weekly rate caps (1% body weight/week) are never compromised.</span></li>
       </ul>
@@ -374,9 +374,9 @@ pages["index.html"] = layout({
       <div class="info-card" style="background:var(--s2);margin-bottom:18px">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
           ${icon("calc", "iris")}
-          <h3 style="margin:0;font-size:18px">Monthly Growth Check</h3>
+          <h3 style="margin:0;font-size:18px">Weekly AI Growth Check</h3>
         </div>
-        <p style="font-size:14px;color:var(--text-mid)">Current weight: <strong>72.4 kg</strong> (&minus;1.8 kg this month)</p>
+        <p style="font-size:14px;color:var(--text-mid)">Current weight: <strong>72.4 kg</strong> (&minus;0.5 kg this week)</p>
         <p style="font-size:14px;color:var(--text-mid)">Updated target: <strong class="hue-apricot">1,820 kcal</strong> &bull; 140g P &bull; 190g C &bull; 55g F</p>
       </div>
       <div class="info-card" style="background:var(--s2)">
@@ -401,16 +401,15 @@ pages["index.html"] = layout({
           <small style="color:var(--apricot)">Host Pays &bull; Members Join Free</small>
         </div>
       </div>
-      <p style="font-size:14.5px;color:var(--text-mid);line-height:1.6">The room creator's tier covers the entire room. Your partner or gym buddies don't need a paid subscription to experience shared accountability, chats, focus sessions, and leaderboards.</p>
+      <p style="font-size:14.5px;color:var(--text-mid);line-height:1.6">The room creator's tier covers the entire room. Your partner, gym buddies, or friend squad don't need a paid subscription to experience shared accountability, chats, focus sessions, and leaderboards.</p>
       <div style="margin-top:20px;padding:14px;background:var(--s2);border-radius:var(--radius-control);border:1px solid var(--hairline)">
-        <div style="font-size:13px;color:var(--text-mid)">Free Tier: <strong>1 Room (2 People)</strong></div>
-        <div style="font-size:13px;color:var(--text-mid);margin-top:6px">Plus Plan: <strong>3 Rooms (5 People each)</strong></div>
-        <div style="font-size:13px;color:var(--text-mid);margin-top:6px">Pro Plan: <strong>5 Rooms (20 People each)</strong></div>
+        <div style="font-size:13px;color:var(--text-mid)">Free Tier: <strong>1-on-1 Partner Room (2 People)</strong></div>
+        <div style="font-size:13px;color:var(--text-mid);margin-top:6px">Pro Plan: <strong>Host Rooms with Squads &amp; Friends &bull; Unlimited Members</strong></div>
       </div>
     </div>
     <div>
       <h2>Host pays. Your people progress together.</h2>
-      <p class="lead" style="margin-top:14px">No more asking your partner to subscribe just to train with you. Free users get a dedicated 1-on-1 pair room forever, while Plus and Pro hosts can sponsor squad rooms.</p>
+      <p class="lead" style="margin-top:14px">No more asking your partner or friends to subscribe just to train with you. Free users get a dedicated 1-on-1 pair room forever, while Pro hosts can sponsor rooms for their entire squad with unlimited members.</p>
       <ul class="checks">
         <li><span><b>Free pair room included forever</b> for you and your accountability partner.</span></li>
         <li><span><b>Guests join any paid room free</b> with full access to shared features.</span></li>
@@ -425,19 +424,20 @@ pages["index.html"] = layout({
   <div class="wrap">
     <div class="section-head center">
       <h2>Transparent tiers for every journey</h2>
-      <p class="lead" style="margin-top:14px">Solo logging and 1-on-1 partner rooms are free forever. Upgrade for community power or elite AI coaching.</p>
+      <p class="lead" style="margin-top:14px">Solo logging and 1-on-1 partner rooms are free forever. Upgrade to Pro for unlimited squads, AI avatar generation, and daily AI coaching.</p>
     </div>
 
     <!-- Billing Cycle Controls -->
     <div class="pricing-controls">
-      <div class="toggle-group" role="group" aria-label="Billing cycle selection">
-        <button class="toggle-btn js-bill-btn" data-billing="monthly" type="button">Monthly</button>
-        <button class="toggle-btn js-bill-btn active" data-billing="annual" type="button">Annual <span class="badge-save">Save up to 61%</span></button>
+      <div class="toggle-group" role="group" aria-label="Billing cadence selection">
+        <button class="toggle-btn js-bill-btn" data-billing="quarterly" type="button">3 Months</button>
+        <button class="toggle-btn js-bill-btn" data-billing="semiannual" type="button">6 Months <span class="badge-save">Save ~40%</span></button>
+        <button class="toggle-btn js-bill-btn active" data-billing="annual" type="button">1 Year <span class="badge-save">Save ~58% (Best Value)</span></button>
       </div>
     </div>
 
-    <!-- 3 Tier Cards -->
-    <div class="plans-3">
+    <!-- 2 Tier Cards -->
+    <div class="plans-2">
       <!-- Free Card -->
       <div class="plan-card">
         <div class="plan-header">
@@ -451,10 +451,11 @@ pages["index.html"] = layout({
           <div class="plan-trial-badge no-trial">Free Forever</div>
         </div>
         <ul class="plan-features">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>1 hosted room</strong> (up to 2 people)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Free 1-on-1 partner room</strong> included</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Food, water, steps, workouts &amp; weight</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>1 hosted pair room</strong> (up to 2 people)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Free 1-on-1 partner room</strong> included forever</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Food, water, steps, workouts &amp; weight trends</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>70k+ Indian food database &amp; barcode scan</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Standard avatar base &amp; wardrobe custom styling</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>On-demand manual macro recalculation</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>3 one-time AI Photo food scans</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>100% offline-first SQLite logging</span></li>
@@ -462,54 +463,30 @@ pages["index.html"] = layout({
         <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a>
       </div>
 
-      <!-- Plus Card -->
-      <div class="plan-card featured">
-        <div class="plan-pill">Most Popular &bull; 7-Day Free Trial</div>
-        <div class="plan-header">
-          <div class="plan-name">Plus Plan</div>
-          <div class="plan-position">The habit and community powerhouse</div>
-          <div class="plan-price-wrap">
-            <span class="plan-price" id="price-plus">&#8377;1,499</span>
-            <span class="plan-period" id="period-plus">/ year</span>
-          </div>
-          <div class="plan-equiv" id="equiv-plus">&#8377;125 / month &bull; ~50% savings</div>
-          <div class="plan-trial-badge">7-Day Free Trial Included</div>
-        </div>
-        <ul class="plan-features">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>3 hosted rooms</strong> (up to 5 people each)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Monthly Growth Checks (30d):</strong> Guided macro adjustments</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> invited members join free</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Send &amp; read room text chat &amp; shared workouts</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Live synchronized focus rooms &amp; challenges</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>150+ Recipe library &amp; fasting window timer</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Meal planner, grocery lists &amp; photo vault</span></li>
-        </ul>
-        <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Start 7-Day Free Trial</a>
-      </div>
-
       <!-- Pro Card -->
-      <div class="plan-card pro">
-        <div class="plan-pill pro-pill">Elite AI Coaching</div>
+      <div class="plan-card pro featured">
+        <div class="plan-pill pro-pill">All-Inclusive Pro &bull; Taxes Included</div>
         <div class="plan-header">
           <div class="plan-name">Pro Plan</div>
-          <div class="plan-position">Elite AI-coached nutrition &amp; body transformation</div>
+          <div class="plan-position">Host unlimited squads, generate your AI avatar &amp; personal coaching</div>
           <div class="plan-price-wrap">
             <span class="plan-price" id="price-pro">&#8377;2,499</span>
             <span class="plan-period" id="period-pro">/ year</span>
           </div>
-          <div class="plan-equiv" id="equiv-pro">&#8377;192 / month &bull; ~58% savings</div>
-          <div class="plan-trial-badge no-trial">0-Day Trial (Immediate Billing)</div>
+          <div class="plan-equiv" id="equiv-pro">&#8377;208 / month &bull; Best Value (Save ~58%)</div>
+          <div class="plan-trial-badge">All taxes included — no extra surcharges</div>
         </div>
         <ul class="plan-features">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>5 hosted rooms</strong> (up to 20 people each)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Personal AI Coach</strong> (10 context-aware msgs/day)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>AI Photo Food Logging</strong> (5 scans/day)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Review (7d)</strong> with macro refinement</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Chat-to-Log (&ldquo;I ate 2 eggs and toast&rdquo;)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>&ldquo;Fits My Day&rdquo; AI smart recipe collections</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Room photo &amp; video sharing + Priority support</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host and create rooms with your squads &amp; friends</strong> — unlimited members</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> all invited members join &amp; participate 100% free</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Generate your own AI Body Avatar from your photo</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Progress Pictures weekly &amp; monthly transformation journey</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Workout Calendar visual indicator dot</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Flexible Monthly AI Pools:</strong> 465 AI Coach chats &amp; 248 AI meal scans</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Reviews (7d)</strong> &amp; metabolic macro recalculations</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Send &amp; read room text chat, photo/video sharing, focus rooms &amp; 150+ recipes</span></li>
         </ul>
-        <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro</a>
+        <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro &rarr;</a>
       </div>
     </div>
 
@@ -525,11 +502,12 @@ pages["index.html"] = layout({
     <div class="section-head center"><h2>Questions, answered</h2></div>
     <div class="faq">
       <details><summary>Is CaliPartner free to use?</summary><p>Yes. Downloading and using CaliPartner for solo tracking (food diary, water, steps, workout logs, weight trends, and habit streaks) is completely free forever. You also get 1 free hosted room for you and an accountability partner (up to 2 people) at zero cost.</p></details>
-      <details><summary>How does the 7-day free trial work?</summary><p>The 7-day free trial is available exclusively on <strong>CaliPartner Plus</strong> (both monthly and annual). You are charged &#8377;0 / $0 upfront and have 7 full days to experience multi-person rooms, monthly growth checks, live focus sessions, and advanced micronutrients. You can cancel anytime before day 7 without being billed.</p></details>
-      <details><summary>Why does Pro not have a free trial?</summary><p>CaliPartner Pro utilizes cutting-edge vision models for AI photo food recognition and advanced Claude Haiku inference for personalized daily coaching. Because these incur immediate, non-trivial compute costs, Pro is billed immediately upon signup with 0 trial days.</p></details>
-      <details><summary>Do both of us need to pay for a room?</summary><p>No! CaliPartner uses a <strong>Host Pays</strong> model. The room creator's tier covers the whole room. If you subscribe to Plus or Pro, your invited partners or friends join and participate completely free.</p></details>
+      <details><summary>Are taxes included in Pro pricing?</summary><p>Yes! All prices (&#8377;2,499 for 1 year, &#8377;1,599 for 6 months, &#8377;899 for 3 months / $49.99, $32.99, $18.99) are fully tax-inclusive. We bear the applicable taxes, so you pay strictly the listed price with zero checkout surcharges.</p></details>
+      <details><summary>Why does Pro not have a free trial?</summary><p>CaliPartner Pro provides immediate high-compute GPU features like your custom AI body avatar generation, vision food scans, and continuous Claude Haiku coaching. Because these incur real immediate compute costs, Pro is billed immediately upon confirmation with a 7-day web refund window for accidental charges.</p></details>
+      <details><summary>Do both of us need to pay for a room?</summary><p>No! CaliPartner uses a <strong>Host Pays</strong> model. The room creator's Pro tier covers the entire room. If you subscribe to Pro, all your invited partners or friends join and participate completely free with unlimited members.</p></details>
       <details><summary>What happens if a room host cancels or their plan lapses?</summary><p>The room enters a protected <strong>30-day grace period</strong>. Streaks, routines, workouts, and chat history are never lost. Any room member can sponsor the room by upgrading their own plan to reactivate it immediately.</p></details>
-      <details><summary>What are Dynamic Growth Checks?</summary><p>Nutrition isn't one-size-fits-all, and calorie needs change as you lose weight or build muscle. Plus users receive a guided review every 30 days to adjust targets, while Pro users receive active weekly adjustments from their AI Coach. Strict safety floors (1,200 kcal women, 1,500 kcal men) are always preserved.</p></details>
+      <details><summary>What are the flexible monthly AI allowances?</summary><p>Pro users receive a flexible monthly pool of 465 AI Coach messages (15/day average) and 248 AI Photo meal scans (8/day average). Quotas do not expire every 24 hours, meaning you can flexibly use more scans during weekend meal preps or heavy cooking days without hitting arbitrary daily walls.</p></details>
+      <details><summary>What are Dynamic Growth Checks?</summary><p>Nutrition isn't one-size-fits-all, and calorie needs change as you lose weight or build muscle. Free users can recalculate targets on demand from settings, while Pro users receive active weekly adjustments from their AI Coach. Strict safety floors (1,200 kcal women, 1,500 kcal men) are always preserved.</p></details>
       <details><summary>Can I use CaliPartner on the web?</summary><p>Yes! Our full web application is live at <a href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>. You can sign in and start tracking immediately from any browser on phone, tablet, or laptop.</p></details>
     </div>
   </div>
@@ -541,7 +519,7 @@ ${cta}`,
 pages["features.html"] = layout({
   file: "features.html",
   title: "Features & Specifications | CaliPartner",
-  desc: "Explore complete CaliPartner features: food diary, Indian nutrition database, partner rooms, workout logging, dynamic macro recalculation, AI coaching, and privacy.",
+  desc: "Explore complete CaliPartner features: food diary, Indian nutrition database, partner rooms, workout logging, calendar indicators, AI avatars, dynamic macro recalculation, AI coaching, and privacy.",
   body: `${pageHead("Built for two. Engineered for consistency.", "Food, water, steps, workouts, progress and AI coaching, with a shared accountability room at the center.")}
 
 <section class="section tight"><div class="wrap">
@@ -549,7 +527,7 @@ pages["features.html"] = layout({
   <nav class="toc" aria-label="Feature sections">
     <a href="#core-tracking">1. Core Tracking &amp; Daily Diary</a>
     <a href="#social-rooms">2. Social, Accountability &amp; Rooms</a>
-    <a href="#nutrition-wellness">3. Nutrition, Wellness &amp; Content</a>
+    <a href="#nutrition-wellness">3. Nutrition, Wellness &amp; Transformation</a>
     <a href="#ai-coaching">4. AI Intelligence &amp; Coaching</a>
   </nav>
 
@@ -570,6 +548,7 @@ pages["features.html"] = layout({
         <li><strong>Steps &amp; Distance:</strong> Seamless integration with Apple Health and Health Connect.</li>
         <li><strong>GPS Activity Tracking:</strong> Live route, distance, and pace for walks, runs, and rides.</li>
         <li><strong>Workout Logging:</strong> Catalog of 300+ exercises, sets, reps, and volume history.</li>
+        <li><strong>Workout Calendar Indicator Dot:</strong> Visual indicator dots under days with logged workouts to view monthly consistency at a glance.</li>
         <li><strong>Weight Tracking &amp; Trends:</strong> 7-day moving averages that smooth out water retention.</li>
         <li><strong>Personal Focus Timer:</strong> Stopwatch &amp; pomodoro timer for focused study/work blocks.</li>
         <li><strong>Offline-First SQLite:</strong> Logging never hangs or requires an active connection.</li>
@@ -583,13 +562,13 @@ pages["features.html"] = layout({
         <p>A private room where you and your people stay in it together without toxic competition.</p>
       </div>
       <ul class="spec-list">
-        <li><strong>Room Capacity:</strong> Free: 2 people | Plus: 5 people | Pro: 20 people.</li>
-        <li><strong>Room Sponsorship Model:</strong> Host pays, invited members join free.</li>
+        <li><strong>Room Capacity:</strong> Free: 2 people (1-on-1 pair room) | Pro: unlimited members for your squads &amp; friends.</li>
+        <li><strong>Room Sponsorship Model:</strong> Host pays, invited members join and participate 100% free.</li>
         <li><strong>Free 1-on-1 Partner Room:</strong> Included free forever on all accounts.</li>
         <li><strong>Two Halves, One Seam:</strong> You on the left, your partner on the right.</li>
         <li><strong>Percent, Not Calories:</strong> Comparisons based on % of individual goal achieved.</li>
         <li><strong>Identity Hues:</strong> Iris (Person A) and Teal (Person B)—never green for winning or red for losing.</li>
-        <li><strong>Room Text Chat:</strong> Read-only on Free; Send &amp; Read on Plus and Pro.</li>
+        <li><strong>Room Text Chat:</strong> Read-only on Free; Send &amp; Read on Pro.</li>
         <li><strong>Room Media Sharing:</strong> Share photos and workout videos (Pro exclusive).</li>
         <li><strong>Live Shared Focus Sessions:</strong> Study or work simultaneously with peers.</li>
         <li><strong>Room-Only Leaderboard:</strong> Filtered cohort ranks for just your room members.</li>
@@ -601,19 +580,19 @@ pages["features.html"] = layout({
     <!-- Pillar 3 -->
     <div class="spec-row" id="nutrition-wellness">
       <div class="spec-head">
-        <h2>3. Nutrition, Wellness &amp; Content</h2>
-        <p>Curated recipes, intermittent fasting windows, and comprehensive body metrics.</p>
+        <h2>3. Nutrition, Wellness &amp; Transformation</h2>
+        <p>Custom AI body avatars, private transformation journeys, recipes, and intermittent fasting.</p>
       </div>
       <ul class="spec-list">
-        <li><strong>Recipe Library:</strong> 10 starter recipes on Free; 150+ macro-balanced recipes on Plus/Pro.</li>
+        <li><strong>Exclusive: &ldquo;Own Avatar&rdquo; AI Body Generation (Pro):</strong> Upload your photo to generate your custom AI body avatar matching standard dimensions and all wardrobe layers.</li>
+        <li><strong>Exclusive: Progress Pictures Journey Modal (Pro):</strong> Encrypted photo vault with chronological cards, Weekly / Monthly / All filters, and side-by-side comparison with weight/time delta.</li>
+        <li><strong>Recipe Library:</strong> 10 starter recipes on Free; 150+ macro-balanced recipes on Pro.</li>
         <li><strong>&ldquo;Fits My Day&rdquo; AI Collections:</strong> Smart recipes that hit your remaining daily macros (Pro).</li>
         <li><strong>Fasting Tracker:</strong> 16:8, 18:6, and custom intermittent fasting timers with notifications.</li>
         <li><strong>Advanced Micronutrients:</strong> Fibre, saturated fat, sodium, cholesterol, and sugar tracking.</li>
         <li><strong>Meal Planner &amp; Auto Grocery:</strong> Plan week-long splits and auto-compile shopping lists.</li>
         <li><strong>Workout Routines:</strong> Save multi-day split programs with exercise progressions.</li>
         <li><strong>Auto Rest Timer &amp; PRs:</strong> Countdown rest intervals and automated 1RM / PR tracking.</li>
-        <li><strong>Body Circumferences:</strong> Chest, waist, and hip tape measurement trend lines.</li>
-        <li><strong>Private Photo Vault:</strong> Encrypted side-by-side visual progress comparison.</li>
         <li><strong>Full Data Export:</strong> Export your full nutrition, workout, and biometric data to JSON/CSV.</li>
       </ul>
     </div>
@@ -622,13 +601,14 @@ pages["features.html"] = layout({
     <div class="spec-row" id="ai-coaching">
       <div class="spec-head">
         <h2>4. AI Intelligence &amp; Coaching</h2>
-        <p>Context-aware nutrition intelligence and automated metabolic recalculation.</p>
+        <p>Flexible monthly pools, context-aware nutrition coaching, and automated metabolic recalculation.</p>
       </div>
       <ul class="spec-list">
-        <li><strong>Personal AI Coach:</strong> Context-aware Claude Haiku coach (10 msgs/day on Pro).</li>
-        <li><strong>AI Photo Food Logging:</strong> Snap a photo to estimate multi-item portions and macros (5 scans/day on Pro).</li>
+        <li><strong>Personal AI Coach:</strong> Context-aware Claude Haiku coach (465 monthly chats on Pro, flexible pool).</li>
+        <li><strong>AI Photo Food Logging:</strong> Multi-item portions and macro breakdowns (248 monthly scans on Pro, flexible pool).</li>
+        <li><strong>Flexible Monthly Allowances:</strong> No rigid daily lockouts; use your quota flexibly whenever needed.</li>
         <li><strong>Chat-to-Log:</strong> Type &ldquo;I ate 2 boiled eggs and toast with chai&rdquo; to auto-log instantly.</li>
-        <li><strong>Monthly Macro Growth Check:</strong> 30-day guided recalculation on Plus based on weight trend.</li>
+        <li><strong>On-Demand Manual Recalculation:</strong> Adjust your targets anytime on Free based on scale weight.</li>
         <li><strong>Weekly AI Growth Review:</strong> 7-day rolling adherence and metabolic review on Pro.</li>
         <li><strong>Weekly AI Progress Summary:</strong> Deep-dive metabolic and consistency analysis every Sunday.</li>
         <li><strong>Priority Support Queue:</strong> Direct fast-track customer support for Pro members.</li>
@@ -645,20 +625,21 @@ ${cta}`,
 pages["pricing.html"] = layout({
   file: "pricing.html",
   title: "Plans, Features and Pricing | CaliPartner",
-  desc: "Official CaliPartner pricing: Free Basic tier with 1-on-1 partner room, Plus Plan with 7-day trial at Rs 249/mo, and Pro Plan with AI coaching at Rs 499/mo.",
-  body: `${pageHead("Plans, Features &amp; Pricing", "Solo logging and 1-on-1 partner rooms are free forever. Upgrade for community power or elite AI coaching.")}
+  desc: "Official CaliPartner pricing: Free Basic tier with 1-on-1 partner room, and Pro Plan with unlimited squads, AI avatars, progress journeys, and AI coaching. All taxes inclusive.",
+  body: `${pageHead("Plans, Features &amp; Pricing", "Solo logging and 1-on-1 partner rooms are free forever. Upgrade to Pro for unlimited squads, AI avatar body generation, progress pictures transformation journey, and daily AI coaching.")}
 
 <section class="section tight"><div class="wrap">
   <!-- Billing Cycle Controls -->
   <div class="pricing-controls">
-    <div class="toggle-group" role="group" aria-label="Billing cycle selection">
-      <button class="toggle-btn js-bill-btn" data-billing="monthly" type="button">Monthly</button>
-      <button class="toggle-btn js-bill-btn active" data-billing="annual" type="button">Annual <span class="badge-save">Save up to 61%</span></button>
+    <div class="toggle-group" role="group" aria-label="Billing cadence selection">
+      <button class="toggle-btn js-bill-btn" data-billing="quarterly" type="button">3 Months</button>
+      <button class="toggle-btn js-bill-btn" data-billing="semiannual" type="button">6 Months <span class="badge-save">Save ~40%</span></button>
+      <button class="toggle-btn js-bill-btn active" data-billing="annual" type="button">1 Year <span class="badge-save">Save ~58% (Best Value)</span></button>
     </div>
   </div>
 
-  <!-- 3 Tier Cards -->
-  <div class="plans-3">
+  <!-- 2 Tier Cards -->
+  <div class="plans-2">
     <!-- Free Card -->
     <div class="plan-card">
       <div class="plan-header">
@@ -672,10 +653,11 @@ pages["pricing.html"] = layout({
         <div class="plan-trial-badge no-trial">Free Forever</div>
       </div>
       <ul class="plan-features">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>1 hosted room</strong> (2 people capacity)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Free 1-on-1 Partner Room</strong> included</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>1 hosted pair room</strong> (up to 2 people)</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Free 1-on-1 partner room</strong> included forever</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Full food, water, steps, workout &amp; weight diary</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>70k+ Indian food database &amp; barcode scanner</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Standard avatar base &amp; wardrobe custom styling</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Basic room nutrition sharing (cals, protein, carbs)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>On-demand manual macro recalculation</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>3 one-time AI Photo food scans</span></li>
@@ -684,60 +666,36 @@ pages["pricing.html"] = layout({
       <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a>
     </div>
 
-    <!-- Plus Card -->
-    <div class="plan-card featured">
-      <div class="plan-pill">Most Popular &bull; 7-Day Free Trial</div>
-      <div class="plan-header">
-        <div class="plan-name">Plus Plan</div>
-        <div class="plan-position">The habit and community powerhouse</div>
-        <div class="plan-price-wrap">
-          <span class="plan-price" id="price-plus">&#8377;1,499</span>
-          <span class="plan-period" id="period-plus">/ year</span>
-        </div>
-        <div class="plan-equiv" id="equiv-plus">&#8377;125 / month &bull; ~50% savings</div>
-        <div class="plan-trial-badge">7-Day Free Trial on Monthly &amp; Annual</div>
-      </div>
-      <ul class="plan-features">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>3 hosted rooms</strong> (up to 5 people per room)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Monthly Growth Checks (30d):</strong> Proactive macro updates</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> invited members join completely free</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Full shared diary &amp; send/read room text chat</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Live synchronized focus rooms &amp; pair challenges</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>150+ Recipe library &amp; fasting window timer</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Advanced micronutrients (fibre, sat fat, sodium, sugar)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Meal planner, grocery lists, PRs &amp; photo vault</span></li>
-      </ul>
-      <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Start 7-Day Free Trial</a>
-    </div>
-
     <!-- Pro Card -->
-    <div class="plan-card pro">
-      <div class="plan-pill pro-pill">Elite AI Coaching</div>
+    <div class="plan-card pro featured">
+      <div class="plan-pill pro-pill">All-Inclusive Pro &bull; Taxes Included</div>
       <div class="plan-header">
         <div class="plan-name">Pro Plan</div>
-        <div class="plan-position">Elite AI-coached nutrition &amp; body transformation</div>
+        <div class="plan-position">Host unlimited squads, generate your AI avatar &amp; personal coaching</div>
         <div class="plan-price-wrap">
           <span class="plan-price" id="price-pro">&#8377;2,499</span>
           <span class="plan-period" id="period-pro">/ year</span>
         </div>
-        <div class="plan-equiv" id="equiv-pro">&#8377;192 / month &bull; ~58% savings</div>
-        <div class="plan-trial-badge no-trial">0-Day Trial (Immediate Billing)</div>
+        <div class="plan-equiv" id="equiv-pro">&#8377;208 / month &bull; Best Value (Save ~58%)</div>
+        <div class="plan-trial-badge">All taxes included — no extra surcharges</div>
       </div>
       <ul class="plan-features">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>5 hosted rooms</strong> (up to 20 people per room)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly Growth Checks (7d)</strong> with AI Coach review</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Personal AI Coach:</strong> 10 context-aware msgs/day</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>AI Photo Food Logging:</strong> 5 scans/day</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Chat-to-Log:</strong> natural language food parsing</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>&ldquo;Fits My Day&rdquo;</strong> AI recipes matching remaining macros</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Room photo &amp; video sharing + Priority support</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host and create rooms with your squads &amp; friends</strong> — unlimited members</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> all invited members join &amp; participate 100% free</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Generate your own AI Body Avatar from your photo</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Progress Pictures weekly &amp; monthly transformation journey</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Workout Calendar visual indicator dot</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Flexible Monthly AI Pools:</strong> 465 AI Coach chats &amp; 248 AI meal scans</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Reviews (7d)</strong> &amp; metabolic macro recalculations</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Send &amp; read room text chat, photo/video sharing, focus rooms &amp; 150+ recipes</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Priority customer support queue</span></li>
       </ul>
-      <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro</a>
+      <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro &rarr;</a>
     </div>
   </div>
 
   <p class="muted" style="text-align:center;margin-top:24px">
-    Prices include all taxes. Payments processed securely via Dodo Payments (Web) &amp; Google Play / App Store (Mobile).
+    All prices are tax-inclusive. We bear the applicable taxes with zero checkout surcharges. Payments processed securely via Dodo Payments (Web) &amp; Google Play / App Store (Mobile).
   </p>
 </div></section>
 
@@ -759,106 +717,211 @@ pages["pricing.html"] = layout({
           <td>Re-trigger the onboarding calculator from settings at any time based on updated scale weight.</td>
         </tr>
         <tr>
-          <td><strong>Plus Plan</strong></td>
-          <td class="y"><strong>Every Month (30 Days)</strong></td>
-          <td>App prompts a Monthly Growth Review: analyzes weight trends, verifies goal pace, and calculates updated macro targets for confirmation.</td>
-        </tr>
-        <tr>
           <td><strong>Pro Plan</strong></td>
           <td class="y"><strong>Every Week (7 Days)</strong></td>
-          <td>The AI Coach actively reviews rolling 7-day weights, workout volume, and compliance, recommending micro calorie and macro refinements to prevent plateaus.</td>
+          <td>The AI Coach actively reviews rolling 7-day weights, workout volume, and adherence, recommending micro calorie and macro refinements to prevent plateaus.</td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="callout amber" style="margin-top:20px">
-    <strong>Safety Enforcement:</strong> In both Plus and Pro, calorie floors (1,200 kcal women, 1,500 kcal men) and weekly rate caps (maximum 1% body weight per week) remain strictly enforced.
+    <strong>Safety Enforcement:</strong> In both Free and Pro, calorie floors (1,200 kcal women, 1,500 kcal men) and weekly rate caps (maximum 1% body weight per week) remain strictly enforced.
   </div>
 </div></section>
 
-<!-- Comprehensive 4-Part Comparison Matrix -->
+<!-- Screenshot-Style Feature Comparison Table -->
 <section class="section"><div class="wrap">
-  <div class="section-head">
-    <h2>Comprehensive Feature Comparison Matrix</h2>
-    <p class="lead" style="margin-top:14px">Detailed breakdown across all four core pillars of the CaliPartner platform.</p>
-  </div>
+  <div class="feature-compare-card">
+    <div class="feature-compare-head">
+      <h3>Enhance your training experience</h3>
+      <p>Choose the level of accountability and intelligence that powers your transformation.</p>
+    </div>
 
-  <div class="compare-wrap">
-    <table class="compare">
-      <thead>
-        <tr>
-          <th style="width:40%">Feature</th>
-          <th style="width:20%">Free (Basic)</th>
-          <th style="width:20%">Plus Plan</th>
-          <th style="width:20%">Pro Plan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Section 3.1 -->
-        <tr class="category-row"><td colspan="4">3.1 Core Tracking &amp; Daily Diary</td></tr>
-        <tr><td>Food Diary (5 meal slots)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>70,000+ Food Database (IFCT Indian foods first)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Barcode Scanner (Camera &amp; Gallery)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Custom Foods &amp; &ldquo;My Meals&rdquo;</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Calorie &amp; Macro Targets with Safety Floors</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Water Logging &amp; Smart Hydration Reminders</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Steps &amp; Distance (Apple Health / Health Connect)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>GPS Activity Tracking (Walks, Runs, Rides)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Workout Logging (300+ Exercise Catalog)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Weight Tracking &amp; 7-Day Moving Trends</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Personal Progress Graphs &amp; Consistency Score</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Personal Focus Timer &amp; Stopwatch</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Weekly Community Leaderboard</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>100% Offline-First SQLite Architecture</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
+    <div class="compare-list">
+      <div class="compare-row head">
+        <span>Feature</span>
+        <span class="col-center">FREE</span>
+        <span class="col-center col-pro">PRO</span>
+      </div>
 
-        <!-- Section 3.2 -->
-        <tr class="category-row"><td colspan="4">3.2 Social, Accountability &amp; Rooms</td></tr>
-        <tr><td>Hosted Rooms Count</td><td><strong>1 room</strong></td><td class="y"><strong>3 rooms</strong></td><td class="y"><strong>5 rooms</strong></td></tr>
-        <tr><td>Capacity Per Hosted Room</td><td><strong>2 people</strong></td><td class="y"><strong>5 people</strong></td><td class="y"><strong>20 people</strong></td></tr>
-        <tr><td>Member Free Join (Host Pays)</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Free 1-on-1 Partner Room</td><td class="y">Included</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Shared Nutrition in Room</td><td>Basic (cals/protein/carbs)</td><td class="y">Full Diary</td><td class="y">Full Diary</td></tr>
-        <tr><td>Room Text Chat</td><td>Read-only</td><td class="y">Send &amp; Read</td><td class="y">Send &amp; Read</td></tr>
-        <tr><td>Room Media Sharing (Photos &amp; Videos)</td><td>&mdash;</td><td>&mdash;</td><td class="y">Included (Cloudflare R2)</td></tr>
-        <tr><td>Shared Workouts in Room Feed</td><td>Read-only</td><td class="y">Share &amp; Read</td><td class="y">Share &amp; Read</td></tr>
-        <tr><td>Live Synchronized Focus Sessions</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Room-Only Leaderboard</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Pair Challenges (1, 7, 30 days)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Seasonal Challenges (Winter Arc, etc.)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Username Search &amp; Friend Requests</td><td>3 requests / 7 days</td><td class="y">Unlimited</td><td class="y">Unlimited</td></tr>
-        <tr><td>Partner Finder</td><td>Receive &amp; Accept</td><td class="y">Browse &amp; Send</td><td class="y">Browse &amp; Send</td></tr>
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Track food, water, steps, workouts &amp; weight</strong>
+          <span>Complete daily logging with 100% offline-first SQLite sync</span>
+        </div>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
 
-        <!-- Section 3.3 -->
-        <tr class="category-row"><td colspan="4">3.3 Nutrition, Wellness &amp; Content</td></tr>
-        <tr><td>Recipe Library</td><td>10 starter</td><td class="y">Full (150+)</td><td class="y">Full (150+)</td></tr>
-        <tr><td>&ldquo;Fits My Day&rdquo; AI Recipe Collections</td><td>&mdash;</td><td>&mdash;</td><td class="y">Included</td></tr>
-        <tr><td>Fasting Tracker &amp; Eating Windows (16:8, 18:6)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Advanced Micronutrients (Fibre, Sat Fat, Sodium, Sugar)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Meal Planner &amp; Auto Grocery Lists</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Workout Routines &amp; Exercise Programs</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Workout Rest Timer &amp; Personal Records (PRs)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Body Circumferences (Chest, Waist, Hips)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Private Progress Photo Vault (Encrypted)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
-        <tr><td>Full Data Export (JSON / CSV)</td><td>&mdash;</td><td class="y">Included</td><td class="y">Included</td></tr>
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>70,000+ Indian food database &amp; barcode scanner</strong>
+          <span>IFCT regional dishes, custom foods &amp; quick re-log</span>
+        </div>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
 
-        <!-- Section 3.4 -->
-        <tr class="category-row"><td colspan="4">3.4 AI Intelligence &amp; Coaching</td></tr>
-        <tr><td>Personal AI Nutrition &amp; Fitness Coach</td><td>Locked preview</td><td>&mdash;</td><td class="y">10 msgs / day (Claude Haiku)</td></tr>
-        <tr><td>AI Photo Food Logging</td><td>3 one-time trial</td><td>&mdash;</td><td class="y">5 scans / day</td></tr>
-        <tr><td>Chat-to-Log (&ldquo;I ate 2 eggs and toast&rdquo;)</td><td>&mdash;</td><td>&mdash;</td><td class="y">Included</td></tr>
-        <tr><td>Macro Growth Recalculation</td><td>Manual</td><td class="y">Monthly (30 days)</td><td class="y">Weekly (7 days)</td></tr>
-        <tr><td>Weekly AI Progress &amp; Metabolic Summary</td><td>&mdash;</td><td>&mdash;</td><td class="y">Included</td></tr>
-        <tr><td>Priority Support Queue</td><td>Standard</td><td>Standard</td><td class="y">Priority</td></tr>
-      </tbody>
-      <tfoot>
-        <tr class="table-cta-row">
-          <td><strong>Choose your plan &amp; start today</strong></td>
-          <td><a class="btn btn-ghost btn-sm" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a></td>
-          <td><a class="btn btn-primary btn-sm" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Start 7-Day Free Trial</a></td>
-          <td><a class="btn btn-ghost btn-sm" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro</a></td>
-        </tr>
-      </tfoot>
-    </table>
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Free 1-on-1 accountability partner room</strong>
+          <span>Dedicated pair room for you and your workout partner</span>
+        </div>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Standard avatar base &amp; custom styling</strong>
+          <span>Full wardrobe layering, hairstyles, accessories &amp; gear</span>
+        </div>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Workout logging &amp; 300+ exercise catalog</strong>
+          <span>Sets, reps, weights, rest timers and personal records (PRs)</span>
+        </div>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Host squad rooms with unlimited members</strong>
+          <span>Create rooms for your friend group, clients, or gym squad</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Room Sponsorship: invited members join free</strong>
+          <span>Host covers the room — your friends never have to pay</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Own Avatar: Generate AI Body from photo</strong>
+          <span>Custom AI body avatar matching standard wardrobe dimensions</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Progress Pictures Transformation Journey</strong>
+          <span>Chronological vault, weekly/monthly filters &amp; side-by-side delta</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Workout Calendar visual indicator dot</strong>
+          <span>Accent indicator dot under logged workout days on monthly calendar</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Context-aware Personal AI Coach</strong>
+          <span>465 monthly chats (15/day avg) &bull; flexible pool, no daily blockers</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>AI Photo Food &amp; Meal Recognition</strong>
+          <span>248 monthly scans (8/day avg) &bull; multi-dish portions &amp; macro breakdown</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Chat-to-Log natural language food input</strong>
+          <span>&ldquo;I ate 2 boiled eggs and toast with chai&rdquo; logged instantly</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Weekly AI Growth Reviews &amp; macro recalculation</strong>
+          <span>7-day rolling adherence &amp; metabolic analysis preventing plateaus</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Send &amp; read room text chat</strong>
+          <span>Full private communication, cheers, and workout logs</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Room photo &amp; video sharing</strong>
+          <span>Share meal snapshots, form check videos &amp; progress</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Live synchronized focus sessions &amp; pair challenges</strong>
+          <span>Co-working pomodoro timer and seasonal challenges (Winter Arc)</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>150+ Recipe library &amp; &ldquo;Fits My Day&rdquo; AI collections</strong>
+          <span>Smart recipes matching your exact remaining macro split</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+
+      <div class="compare-row">
+        <div class="col-feature">
+          <strong>Priority customer support queue</strong>
+          <span>Direct fast-track support for your account &amp; sync</span>
+        </div>
+        <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
+        <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
+      </div>
+    </div>
+
+    <div class="compare-footer-note">and much more to come!</div>
+
+    <div class="compare-actions">
+      <a class="btn btn-ghost" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Get Started Free</a>
+      <a class="btn btn-primary" href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">Upgrade to Pro &rarr;</a>
+    </div>
   </div>
 </div></section>
 
@@ -866,10 +929,10 @@ pages["pricing.html"] = layout({
 <section class="section tight"><div class="wrap">
   <div class="section-head"><h2>Key Billing &amp; Architectural Rules</h2></div>
   ${rows([
-    ["Room Sponsorship Model", "The room host's plan determines room capacity. Invited members do not need to pay to participate. If a host's subscription lapses, the room enters a 30-day protected grace state where any member can upgrade to sponsor it."],
-    ["7-Day Free Trial on Plus", "Available exclusively on Plus (both monthly and annual). Cancel anytime before day 7 in your store or web dashboard and you will not be billed."],
-    ["Pro Immediate Billing", "Pro has 0 trial days due to underlying Claude Haiku and computer vision compute costs. Billing begins immediately upon subscription confirmation."],
-    ["Privacy and Safety", "Strangers in Partner Finder only see banded demographics (age bracket, fitness goal, training style, city)—never your weight, calories, or exact location before mutual pairing."],
+    ["Room Sponsorship Model", "The room host's Pro plan covers the entire room. Invited friends, gym partners, or coaching clients join and participate 100% free with unlimited members. If a host lapses, the room enters a 30-day protected grace state where any member can upgrade to sponsor it."],
+    ["All Taxes Inclusive", "All CaliPartner Pro prices (&#8377;2,499 for 1 year, &#8377;1,599 for 6 months, &#8377;899 for 3 months / $49.99, $32.99, $18.99) are 100% tax-inclusive. We bear the applicable taxes, so you pay strictly the listed price with zero checkout surcharges."],
+    ["Pro Immediate Billing & 7-Day Web Window", "Pro features immediate high-compute GPU usage (AI body avatar generation, vision food scans, continuous Claude Haiku coaching). Subscriptions are billed immediately upon confirmation, with a 7-day refund window for web purchases."],
+    ["Flexible Monthly AI Pools", "Quotas are pooled monthly (465 AI chats and 248 food scans per month) rather than expiring every 24 hours. Use them flexibly during weekend meal preps or heavy training days without daily lockouts."],
   ])}
 </div></section>
 ${cta}`,

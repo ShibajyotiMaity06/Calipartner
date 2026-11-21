@@ -425,9 +425,9 @@ const posts = [
 <h2>The Host-Sponsorship Model: Clients Join 100% Free</h2>
 <p>CaliPartner was built with a revolutionary **Host Sponsorship** architecture:</p>
 <ul>
-  <li>As a trainer on the <strong>Plus Plan</strong> (₹249/mo or $4.99/mo), you can host up to 3 rooms with up to 5 members each.</li>
-  <li>On the <strong>Pro Plan</strong> (₹499/mo or $9.99/mo), you can host up to 5 rooms with up to 20 members per room (managing up to 100 clients).</li>
-  <li><strong>Your students pay ₹0.</strong> They join your private room via your 6-digit coach invite code and unlock full room features, chat, and diary sharing without having to purchase a subscription.</li>
+  <li>On the free tier, anyone can host a dedicated 1-on-1 partner room for 2 people forever.</li>
+  <li>As a trainer on the <strong>Pro Plan</strong>, you can host rooms with your squads, students, and clients with <strong>unlimited members</strong>.</li>
+  <li><strong>Your students pay ₹0.</strong> They join your private room via your invite code and unlock full room features, chat, and diary sharing without having to purchase a subscription.</li>
 </ul>
 
 <h2>The 3-Step Coach Onboarding Protocol</h2>
@@ -598,8 +598,8 @@ const posts = [
 
 <h2>How to Launch Your Squad Room in CaliPartner</h2>
 <ol>
-  <li><strong>Choose a Host:</strong> One member hosts the room on the Plus or Pro plan. All invited friends join for free.</li>
-  <li><strong>Set Squad Capacity:</strong> Add up to 5 friends on Plus, or up to 20 friends on Pro for larger gym squads or running clubs.</li>
+  <li><strong>Choose a Host:</strong> One member hosts the room on the Pro plan (or pair up in the free 1-on-1 room). All invited friends join completely free.</li>
+  <li><strong>Set Squad Capacity:</strong> Add your entire friend group, gym squad, or running club with unlimited room members on Pro.</li>
   <li><strong>Inspect Side-by-Side Progress:</strong> Swipe between members to celebrate high streaks and nudge anyone who hasn't logged their water.</li>
   <li><strong>Crown the Weekly Winner:</strong> Celebrate the most consistent member every Sunday evening!</li>
 </ol>

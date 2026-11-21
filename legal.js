@@ -17,12 +17,30 @@ module.exports.pages = (S) => ({
 <li>You are responsible for the accuracy of the information you provide and for keeping your login secure.</li>
 <li>You may delete your account at any time from the app or by following our <a href="delete-account.html">account deletion page</a>.</li>
 </ul>
-<h2 id="subs">4. Plans, billing and free trial</h2>
+<h2 id="subs">4. Plans, billing and membership</h2>
 <ul>
-<li><strong>Free Tier (Basic):</strong> Personal logging of food, water, steps, workouts and weight, your diary, personal progress, personal streaks, and your free 1-on-1 partner room (capacity 2 people) are free forever.</li>
-<li><strong>Plus Plan:</strong> The habit and community powerhouse. India: &#8377;249 per month or &#8377;1,499 per year (~50% annual savings). Global: $4.99 per month or $29.99 per year (~53% annual savings). Includes a <strong>7-day free trial</strong> on both monthly and annual plans. Features hosting up to 3 rooms (up to 5 people per room), monthly macro growth checks (every 30 days), full shared diary, send &amp; read room text chat, shared workouts, live focus sessions, room leaderboards, fasting timer, and advanced micronutrient tracking.</li>
-<li><strong>Pro Plan:</strong> The elite AI-coached nutrition and body transformation tier. India: &#8377;499 per month or &#8377;2,499 per year (~58% annual savings). Global: $9.99 per month or $49.00 per year (~61% annual savings). <strong>No free trial (0 days)</strong> due to high underlying vision and language model compute costs. Billed immediately upon confirmation. Features hosting up to 5 rooms (up to 20 people per room), weekly AI growth &amp; macro recalculation checks (every 7 days), context-aware Personal AI Coach (10 msgs/day), AI Photo Food Logging (5 scans/day), Chat-to-Log, &ldquo;Fits My Day&rdquo; AI recipe collections, room photo &amp; video sharing, weekly AI progress summaries, and priority support.</li>
-<li><strong>Room Sponsorship Model (Host Pays):</strong> The room creator/host's plan determines the room capacity (Free: 2, Plus: 5, Pro: 20 members). Invited members join any paid room for free without needing their own subscription. If a host's plan lapses, the room enters a 30-day grace/paused state where any member can sponsor it, preserving all streaks and history.</li>
+<li><strong>Free Tier (Basic):</strong> Personal logging of food, water, steps, workouts and weight trends, your daily diary, personal progress graphs, personal streaks, 70k+ Indian food database, barcode scanner, and your free 1-on-1 partner room (capacity 2 people) are free forever.</li>
+<li><strong>Pro Plan (All-Inclusive):</strong> The single, comprehensive premium membership encompassing all community, habit, and AI capabilities. Pro includes:
+  <ul>
+    <li><strong>Room Hosting:</strong> Create and host rooms with your squads &amp; friends with unlimited members.</li>
+    <li><strong>Room Sponsorship Model (Host Pays):</strong> The room creator's Pro plan covers the room. Invited partners, gym buddies, and friends join and participate 100% free with zero required subscription.</li>
+    <li><strong>Own Avatar AI Body Generation:</strong> Exclusive access to generate your custom AI body avatar from your photo matching wardrobe layers.</li>
+    <li><strong>Progress Pictures Transformation Journey:</strong> Private encrypted photo vault with chronological photo cards, weekly and monthly cadence filters, and side-by-side visual comparisons with weight/time delta.</li>
+    <li><strong>Workout Calendar Visual Indicator:</strong> Distinct visual indicator dots under workout days on your calendar to view monthly consistency at a glance.</li>
+    <li><strong>Flexible Monthly AI Allowances:</strong> 465 context-aware AI Coach messages per month (15/day average) and 248 AI Photo meal scans per month (8/day average), usable flexibly without daily lockouts.</li>
+    <li><strong>Weekly AI Growth Reviews:</strong> 7-day rolling adherence and metabolic macro recalculations.</li>
+    <li><strong>Full Communication:</strong> Send &amp; read room text chat, room photo/video sharing, shared workouts, and live focus sessions.</li>
+  </ul>
+</li>
+<li><strong>Billing Cadences &amp; Tax-Inclusive Pricing:</strong> Pro is available in three billing cadences:
+  <ul>
+    <li><strong>1 Year (Annual):</strong> &#8377;2,499 in India (raw monthly: &#8377;208) / $49.99 internationally (raw monthly: $4.17). Best Value (~58% savings).</li>
+    <li><strong>6 Months:</strong> &#8377;1,599 in India (raw monthly: &#8377;266) / $32.99 internationally (raw monthly: $5.50). (~40% savings).</li>
+    <li><strong>3 Months (Quarterly):</strong> &#8377;899 in India (raw monthly: &#8377;299) / $18.99 internationally (raw monthly: $6.33).</li>
+  </ul>
+  <strong>All taxes are inclusive:</strong> We bear the applicable taxes. Users pay strictly the stated price with zero checkout surcharges.
+</li>
+<li><strong>No Free Trial on Pro:</strong> Due to immediate high-compute GPU costs for custom AI avatar generation, computer vision photo recognition, and LLM inference, Pro subscriptions are billed immediately upon confirmation.</li>
 <li><strong>Auto-renewal:</strong> Plans renew automatically at the end of each period until you cancel. Cancel before the renewal date through your store or web subscription settings to avoid the next charge.</li>
 <li><strong>Payment processing:</strong> In-app purchases are processed by Google Play Billing, Apple In-App Purchase, or RevenueCat. Web purchases are processed by our payment partner, Dodo Payments, which acts as the merchant of record for web transactions.</li>
 <li><strong>Refunds:</strong> See our <a href="refund-policy.html">refund and cancellation policy</a>.</li>
@@ -126,8 +144,8 @@ module.exports.pages = (S) => ({
     h1: "Refund and cancellation policy",
     lead: "Cancel anytime. Here is how cancellation works and how to request a refund.",
     html: `
-<h2>1. Free trial</h2>
-<p>CaliPartner Plus includes a <strong>7-day free trial</strong> on both Monthly and Annual subscriptions. You can test all room hosting, chat, focus sessions, and advanced micronutrients for 7 days without being charged. If you cancel during the trial, you will not be billed. CaliPartner Pro does not include a free trial due to immediate vision and AI compute costs.</p>
+<h2>1. Free trial &amp; billing policy</h2>
+<p>CaliPartner Free is 100% free forever with no credit card required. CaliPartner Pro does not offer a free trial due to immediate high-compute GPU and model costs (including custom AI avatar generation, vision food scans, and continuous LLM coaching). Pro subscriptions are billed immediately upon checkout confirmation.</p>
 <h2>2. Cancelling your subscription</h2>
 <p>You can cancel at any time. Your plan stays active until the end of the period you have already paid for, and then it does not renew. Deleting the app or your CaliPartner account does <strong>not</strong> cancel a store or web subscription, so please cancel first.</p>
 <ul>
@@ -138,14 +156,14 @@ module.exports.pages = (S) => ({
 <h2>3. Refunds</h2>
 <ul>
 <li><strong>Google Play and App Store purchases:</strong> The stores process these refunds under their own policies. Request one through <a href="https://support.google.com/googleplay/answer/2479637">Google Play refunds</a> or <a href="https://reportaproblem.apple.com">Apple's Report a Problem</a>. We cannot issue refunds for store purchases directly, but we will support your request where we can.</li>
-<li><strong>Web purchases (Dodo Payments):</strong> If you subscribed through our website and wish to cancel outside the trial window, you may request a refund within <strong>7 days</strong> of the initial charge, provided you have not meaningfully utilized high-compute AI coaching or photo scanning. Email us with your registered email and receipt.</li>
+<li><strong>Web purchases (Dodo Payments):</strong> If you subscribed through our website, you may request a refund within <strong>7 days</strong> of your initial charge, provided you have not extensively utilized high-compute AI features (AI body avatar generation or high-volume meal scans). Email us with your registered email and receipt.</li>
 <li><strong>Accidental or duplicate charges:</strong> We will refund duplicate or erroneous charges in full upon verification.</li>
 <li><strong>Not eligible:</strong> Partial-period refunds after the 7-day window, and plans terminated for serious violations of our community guidelines.</li>
 </ul>
 <h2>4. How long refunds take</h2>
 <p>Approved web refunds are issued to the original payment method and typically take 5 to 10 business days to appear on your bank statement.</p>
 <h2>5. If a host's plan ends (Room Sponsorship)</h2>
-<p>Because CaliPartner uses a host-sponsorship model, room members enjoy room features at no charge under the host's plan. If the host's plan lapses, the room enters a <strong>30-day grace/paused state</strong> where all streaks, routines, and chat history are preserved. Any room member can upgrade to sponsor the room to reactivate it immediately.</p>
+<p>Because CaliPartner uses a host-sponsorship model, room members enjoy room features at no charge under the host's Pro plan. If the host's Pro plan lapses, the room enters a <strong>30-day grace/paused state</strong> where all streaks, routines, and chat history are preserved. Any room member can upgrade to Pro to sponsor the room and reactivate it immediately.</p>
 <h2>6. Delivery</h2>
 <p>CaliPartner is a digital application. Access to paid features begins immediately upon successful payment confirmation.</p>
 <h2>7. Contact</h2>
