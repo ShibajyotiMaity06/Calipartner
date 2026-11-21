@@ -295,7 +295,7 @@ const showcase = [
   ["rooms", "Host rooms for your squads &amp; friends", "Partners, gym buddies or your transformation squad with unlimited members. Invite by @username, link or code. The room host's plan covers the room, and invited members join free."],
   ["food", "Logging that takes seconds", "Search over 70,000 foods (IFCT Indian foods first), barcode scan, AI photo estimate, custom foods and one-tap re-log of recurring meals. Works 100% offline."],
   ["chat", "A private chat for your room", "Send text, cheer each other on, and share photos &amp; videos (Pro). No public feed, no algorithm, and no messages from strangers."],
-  ["workout", "Workouts with calendar consistency", "Log strength, cardio and sports with sets, reps, weights and PRs. Visual indicator dots on your calendar highlight every workout day at a glance."],
+  ["workout", "Workouts and monthly calendar", "Log strength, cardio and sports with sets, reps, weights and PRs. See all your training days at a glance on your monthly calendar."],
   ["water", "Water, steps and fasting", "Track water with smart reminders, sync steps from Apple Health or Health Connect, and log intermittent fasting windows (16:8, 18:6)."],
   ["chart", "Adaptive progress &amp; growth checks", "Weight moving averages, private transformation photo journey, and weekly AI macro recalculations that prevent plateaus."],
 ];
@@ -456,7 +456,7 @@ pages["index.html"] = layout({
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Food, water, steps, workouts &amp; weight trends</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>70k+ Indian food database &amp; barcode scan</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Standard avatar base &amp; wardrobe custom styling</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Workout logging &amp; <strong>calendar consistency indicator dot</strong></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Workout logging</strong> with monthly calendar view</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Send &amp; read room text chat</strong> &amp; cheer nudges</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>On-demand manual macro recalculation</span></li>
         </ul>
@@ -481,7 +481,7 @@ pages["index.html"] = layout({
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> all invited members join &amp; participate 100% free</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Generate your own AI Body Avatar from your photo</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Progress Pictures weekly &amp; monthly transformation journey</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Flexible Monthly AI Pools:</strong> 465 AI Coach chats &amp; 248 AI meal scans</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>AI Coach chats &amp; AI meal scans</strong> — flexible monthly pool</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Reviews (7d)</strong> &amp; metabolic macro recalculations</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>150+ Recipe library</strong> &amp; &ldquo;Fits My Day&rdquo; AI collections</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Room photo &amp; video sharing, live focus rooms &amp; seasonal challenges</span></li>
@@ -506,7 +506,7 @@ pages["index.html"] = layout({
       <details><summary>Why does Pro not have a free trial?</summary><p>CaliPartner Pro provides immediate high-compute GPU features like your custom AI body avatar generation, vision food scans, and continuous Claude Haiku coaching. Because these incur real immediate compute costs, Pro is billed immediately upon confirmation with a 7-day web refund window for accidental charges.</p></details>
       <details><summary>Do both of us need to pay for a room?</summary><p>No! CaliPartner uses a <strong>Host Pays</strong> model. The room creator's Pro tier covers the entire room. If you subscribe to Pro, all your invited partners or friends join and participate completely free with unlimited members.</p></details>
       <details><summary>What happens if a room host cancels or their plan lapses?</summary><p>The room enters a protected <strong>30-day grace period</strong>. Streaks, routines, workouts, and chat history are never lost. Any room member can sponsor the room by upgrading their own plan to reactivate it immediately.</p></details>
-      <details><summary>What are the flexible monthly AI allowances?</summary><p>Pro users receive a flexible monthly pool of 465 AI Coach messages (15/day average) and 248 AI Photo meal scans (8/day average). Quotas do not expire every 24 hours, meaning you can flexibly use more scans during weekend meal preps or heavy cooking days without hitting arbitrary daily walls.</p></details>
+      <details><summary>How do monthly AI allowances work?</summary><p>Pro users receive flexible monthly pools for AI Coach chats and AI meal scans. Quotas are pooled monthly rather than resetting every 24 hours, meaning you can flexibly use your scans and chats during weekend meal preps or heavy cooking days without hitting daily blockers.</p></details>
       <details><summary>What are Dynamic Growth Checks?</summary><p>Nutrition isn't one-size-fits-all, and calorie needs change as you lose weight or build muscle. Free users can recalculate targets on demand from settings, while Pro users receive active weekly adjustments from their AI Coach. Strict safety floors (1,200 kcal women, 1,500 kcal men) are always preserved.</p></details>
       <details><summary>Can I use CaliPartner on the web?</summary><p>Yes! Our full web application is live at <a href="${SITE.appUrl}" target="_blank" rel="noopener noreferrer">app.calipartner.site</a>. You can sign in and start tracking immediately from any browser on phone, tablet, or laptop.</p></details>
     </div>
@@ -548,10 +548,10 @@ pages["features.html"] = layout({
         <li><strong>Steps &amp; Distance:</strong> Seamless integration with Apple Health and Health Connect.</li>
         <li><strong>GPS Activity Tracking:</strong> Live route, distance, and pace for walks, runs, and rides.</li>
         <li><strong>Workout Logging:</strong> Catalog of 300+ exercises, sets, reps, and volume history.</li>
-        <li><strong>Workout Calendar Indicator Dot:</strong> Visual indicator dots under days with logged workouts to view monthly consistency at a glance.</li>
+        <li><strong>Workout Calendar:</strong> Track and view your complete workout history across a monthly calendar view.</li>
         <li><strong>Weight Tracking &amp; Trends:</strong> 7-day moving averages that smooth out water retention.</li>
         <li><strong>Personal Focus Timer:</strong> Stopwatch &amp; pomodoro timer for focused study/work blocks.</li>
-        <li><strong>Offline-First SQLite:</strong> Logging never hangs or requires an active connection.</li>
+        <li><strong>Reliable Logging:</strong> Fast tracking that never hangs or requires an active connection.</li>
       </ul>
     </div>
 
@@ -604,8 +604,8 @@ pages["features.html"] = layout({
         <p>Flexible monthly pools, context-aware nutrition coaching, and automated metabolic recalculation.</p>
       </div>
       <ul class="spec-list">
-        <li><strong>Personal AI Coach:</strong> Context-aware Claude Haiku coach (465 monthly chats on Pro, flexible pool).</li>
-        <li><strong>AI Photo Food Logging:</strong> Multi-item portions and macro breakdowns (248 monthly scans on Pro, flexible pool).</li>
+        <li><strong>Personal AI Coach:</strong> Context-aware Claude Haiku coach for advice, meal ideas, and training questions (flexible monthly pool).</li>
+        <li><strong>AI Photo Food Logging:</strong> Snap a photo to estimate multi-item portions and macro breakdowns (flexible monthly pool).</li>
         <li><strong>Flexible Monthly Allowances:</strong> No rigid daily lockouts; use your quota flexibly whenever needed.</li>
         <li><strong>Chat-to-Log:</strong> Type &ldquo;I ate 2 boiled eggs and toast with chai&rdquo; to auto-log instantly.</li>
         <li><strong>On-Demand Manual Recalculation:</strong> Adjust your targets anytime on Free based on scale weight.</li>
@@ -658,7 +658,7 @@ pages["pricing.html"] = layout({
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Food, water, steps, workouts &amp; weight trends</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>70k+ Indian food database &amp; barcode scanner</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Standard avatar base &amp; wardrobe custom styling</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Workout logging &amp; <strong>calendar consistency indicator dot</strong></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Workout logging</strong> with monthly calendar view</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Send &amp; read room text chat</strong> &amp; cheer nudges</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Basic room nutrition sharing (cals, protein, carbs)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>On-demand manual macro recalculation</span></li>
@@ -684,7 +684,7 @@ pages["pricing.html"] = layout({
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Host pays:</strong> all invited members join &amp; participate 100% free</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Generate your own AI Body Avatar from your photo</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Exclusive:</strong> Progress Pictures weekly &amp; monthly transformation journey</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Flexible Monthly AI Pools:</strong> 465 AI Coach chats &amp; 248 AI meal scans</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>AI Coach chats &amp; AI meal scans</strong> — flexible monthly pool</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>Weekly AI Growth Reviews (7d)</strong> &amp; metabolic macro recalculations</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span><strong>150+ Recipe library</strong> &amp; &ldquo;Fits My Day&rdquo; AI collections</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">${I.check}</svg><span>Room photo &amp; video sharing, live focus rooms &amp; seasonal challenges</span></li>
@@ -747,7 +747,7 @@ pages["pricing.html"] = layout({
       <div class="compare-row">
         <div class="col-feature">
           <strong>Track food, water, steps, workouts &amp; weight</strong>
-          <span>Complete daily logging with 100% offline-first SQLite sync</span>
+          <span>Complete daily logging for meals, hydration, workouts &amp; weight trends</span>
         </div>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
@@ -827,8 +827,8 @@ pages["pricing.html"] = layout({
 
       <div class="compare-row">
         <div class="col-feature">
-          <strong>Workout Calendar visual indicator dot</strong>
-          <span>Accent indicator dot under logged workout days on monthly calendar</span>
+          <strong>Workout calendar &amp; training history</strong>
+          <span>View all your logged workouts across the entire month at a glance</span>
         </div>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
@@ -845,8 +845,8 @@ pages["pricing.html"] = layout({
 
       <div class="compare-row">
         <div class="col-feature">
-          <strong>Context-aware Personal AI Coach</strong>
-          <span>465 monthly chats (15/day avg) &bull; flexible pool, no daily blockers</span>
+          <strong>AI Coach chats</strong>
+          <span>Context-aware personal coach &bull; flexible monthly pool, no daily blockers</span>
         </div>
         <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
@@ -854,8 +854,8 @@ pages["pricing.html"] = layout({
 
       <div class="compare-row">
         <div class="col-feature">
-          <strong>AI Photo Food &amp; Meal Recognition</strong>
-          <span>248 monthly scans (8/day avg) &bull; multi-dish portions &amp; macro breakdown</span>
+          <strong>AI meal scans</strong>
+          <span>Instant multi-dish portions &amp; macro breakdown from food photos</span>
         </div>
         <span class="col-center"><span class="tick-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></span>
         <span class="col-center"><span class="tick-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">${I.check}</svg></span></span>
@@ -932,7 +932,7 @@ pages["pricing.html"] = layout({
     ["Room Sponsorship Model", "The room host's Pro plan covers the entire room. Invited friends, gym partners, or coaching clients join and participate 100% free with unlimited members. If a host lapses, the room enters a 30-day protected grace state where any member can upgrade to sponsor it."],
     ["All Taxes Inclusive", "All CaliPartner Pro prices (&#8377;2,499 for 1 year, &#8377;1,599 for 6 months, &#8377;899 for 3 months / $49.99, $32.99, $18.99) are 100% tax-inclusive. We bear the applicable taxes, so you pay strictly the listed price with zero checkout surcharges."],
     ["Pro Immediate Billing & 7-Day Web Window", "Pro features immediate high-compute GPU usage (AI body avatar generation, vision food scans, continuous Claude Haiku coaching). Subscriptions are billed immediately upon confirmation, with a 7-day refund window for web purchases."],
-    ["Flexible Monthly AI Pools", "Quotas are pooled monthly (465 AI chats and 248 food scans per month) rather than expiring every 24 hours. Use them flexibly during weekend meal preps or heavy training days without daily lockouts."],
+    ["Flexible Monthly AI Pools", "Quotas for AI Coach chats and AI meal scans are pooled monthly rather than expiring every 24 hours. Use them flexibly during weekend meal preps or heavy training days without daily blockers."],
   ])}
 </div></section>
 ${cta}`,
