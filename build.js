@@ -13,6 +13,8 @@ const SITE = {
   legalName: "CaliPartner",
   address: "India",
   updated: "October 2026",
+  googleVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
+  bingVerification: process.env.BING_SITE_VERIFICATION || "",
 };
 
 // ---- Official Brand Logo SVG ----
@@ -146,7 +148,7 @@ function layout({ file, title, desc, body, schema = null, ogType = "website" }) 
 <title>${title}</title>
 <meta name="description" content="${desc}">
 <meta name="author" content="CaliPartner">
-<meta name="theme-color" content="#0E0B08">
+${SITE.googleVerification ? `<meta name="google-site-verification" content="${SITE.googleVerification}">\n` : ""}${SITE.bingVerification ? `<meta name="msvalidate.01" content="${SITE.bingVerification}">\n` : ""}<meta name="theme-color" content="#0E0B08">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
