@@ -4,7 +4,7 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 
-const HOST = "calipartner.site";
+const HOST = "www.calipartner.site";
 const KEY = "c839f1e46b52478a946b2b6ef4534891";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 

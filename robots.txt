@@ -34,5 +34,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://calipartner.site/sitemap.xml
 Sitemap: https://www.calipartner.site/sitemap.xml
+Sitemap: https://calipartner.site/sitemap.xml

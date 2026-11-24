@@ -7,7 +7,7 @@ const blog = require("./blog");
 // ---- Site Configuration ----
 const SITE = {
   name: "CaliPartner",
-  domain: "https://calipartner.site",
+  domain: "https://www.calipartner.site",
   appUrl: "https://app.calipartner.site",
   email: "support@calipartner.site",
   legalName: "CaliPartner",
@@ -1328,7 +1328,7 @@ User-agent: *
 Allow: /
 
 Sitemap: ${SITE.domain}/sitemap.xml
-Sitemap: https://www.calipartner.site/sitemap.xml
+Sitemap: https://calipartner.site/sitemap.xml
 `;
 fs.writeFileSync(path.join(__dirname, "robots.txt"), robotsTxt);
 
