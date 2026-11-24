@@ -136,6 +136,7 @@ function comingSoonModal() {
 }
 
 function layout({ file, title, desc, body, schema = null, ogType = "website" }) {
+  const canonicalUrl = `${SITE.domain}/${file === "index.html" ? "" : file}`;
   const nav = NAV.map(([f, l]) => `<a href="${f}"${f === file ? ' aria-current="page"' : ""}>${l}</a>`).join("");
   return `<!DOCTYPE html>
 <html lang="en">
@@ -144,11 +145,25 @@ function layout({ file, title, desc, body, schema = null, ogType = "website" }) 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${desc}">
+<meta name="author" content="CaliPartner">
 <meta name="theme-color" content="#0E0B08">
-<link rel="canonical" href="${SITE.domain}/${file === "index.html" ? "" : file}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="${canonicalUrl}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
 <meta property="og:type" content="${ogType}">
+<meta property="og:url" content="${canonicalUrl}">
+<meta property="og:site_name" content="CaliPartner">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="${SITE.domain}/assets/favicon.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@calipartner">
+<meta name="twitter:creator" content="@calipartner">
+<meta name="twitter:title" content="${title}">
+<meta name="twitter:description" content="${desc}">
+<meta name="twitter:image" content="${SITE.domain}/assets/favicon.svg">
 ${schema ? `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>` : ""}
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -301,6 +316,94 @@ const showcase = [
 ];
 const showcaseHtml = showcase.map(([v, t, p], i) => `<div class="feat-row${i % 2 ? " flip" : ""}"><div class="feat-text"><h3>${t}</h3><p>${p}</p></div>${V[v]}</div>`).join("");
 
+// ---------- Structured Data Schemas (JSON-LD) ----------
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE.domain}/#organization`,
+  name: SITE.name,
+  url: `${SITE.domain}/`,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE.domain}/assets/favicon.svg`,
+  },
+  email: SITE.email,
+  description: "CaliPartner creates companion-first fitness and habit tracking software designed for accountability partners, friend squads, and couples.",
+  sameAs: [
+    "https://github.com/ShibajyotiMaity06/Calipartner",
+  ],
+};
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": `${SITE.domain}/#software`,
+  name: "CaliPartner",
+  url: `${SITE.domain}/`,
+  downloadUrl: SITE.appUrl,
+  applicationCategory: "HealthApplication",
+  operatingSystem: "Web, Android, iOS",
+  description: "A social calorie, workout, and habit tracker built for accountability partners, friend squads, and couples.",
+  image: `${SITE.domain}/assets/favicon.svg`,
+  screenshot: `${SITE.domain}/assets/favicon.svg`,
+  author: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: `${SITE.domain}/`,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: `${SITE.domain}/`,
+  },
+  featureList: [
+    "1-on-1 private partner accountability rooms",
+    "Squad rooms with unlimited members",
+    "70,000+ Indian food database (IFCT) & barcode scanner",
+    "Workout logging with 300+ exercise library and monthly calendar training history",
+    "AI Coach chats and AI meal photo recognition with flexible monthly pool",
+    "Own Avatar AI body generation matching wardrobe layers",
+    "Progress Pictures transformation journey vault with weekly and monthly filters",
+    "Water intake and hydration logging with weight-adjusted volume reminders",
+    "Step and distance tracking with Apple Health and Health Connect",
+    "Intermittent fasting tracker (16:8, 18:6, custom)",
+    "150+ macro-balanced recipes and 'Fits My Day' AI collections",
+  ],
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Free Tier (Basic)",
+      price: "0",
+      priceCurrency: "INR",
+      description: "Core daily food, water, steps, workout logging with monthly calendar history, and 1-on-1 accountability partner room free forever.",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro Annual Plan",
+      price: "2499",
+      priceCurrency: "INR",
+      priceValidUntil: "2027-12-31",
+      description: "All-inclusive Pro membership with unlimited squad rooms, AI body avatars, transformation photo vault, AI Coach chats, and AI meal scans. All taxes inclusive.",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro 6 Months",
+      price: "1599",
+      priceCurrency: "INR",
+      priceValidUntil: "2027-12-31",
+      description: "6 months of Pro membership with all premium squad, AI, and photo vault features. All taxes inclusive.",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro 3 Months",
+      price: "899",
+      priceCurrency: "INR",
+      priceValidUntil: "2027-12-31",
+      description: "3 months of Pro membership with all premium squad, AI, and photo vault features. All taxes inclusive.",
+    },
+  ],
+};
+
 // ---------- Pages ----------
 const pages = {};
 
@@ -309,6 +412,23 @@ pages["index.html"] = layout({
   file: "index.html",
   title: "CaliPartner: Calorie, Workout & Habit Tracker You Share with a Partner",
   desc: "CaliPartner is the accountability fitness app built for two. Pair up in a private room, track food, water, steps and workouts side by side, and stay consistent together.",
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      softwareApplicationSchema,
+      organizationSchema,
+      {
+        "@type": "WebSite",
+        "@id": `${SITE.domain}/#website`,
+        url: `${SITE.domain}/`,
+        name: SITE.name,
+        description: "CaliPartner: Calorie, Workout & Habit Tracker You Share with a Partner",
+        publisher: {
+          "@id": `${SITE.domain}/#organization`,
+        },
+      },
+    ],
+  },
   body: `
 <section class="hero">
   <div class="hero-bg"></div>
@@ -520,6 +640,22 @@ pages["features.html"] = layout({
   file: "features.html",
   title: "Features & Specifications | CaliPartner",
   desc: "Explore complete CaliPartner features: food diary, Indian nutrition database, partner rooms, workout logging, calendar indicators, AI avatars, dynamic macro recalculation, AI coaching, and privacy.",
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      softwareApplicationSchema,
+      {
+        "@type": "WebPage",
+        "@id": `${SITE.domain}/features.html#webpage`,
+        url: `${SITE.domain}/features.html`,
+        name: "Features & Specifications | CaliPartner",
+        description: "Explore complete CaliPartner features: food diary, Indian nutrition database, partner rooms, workout logging, calendar indicators, AI avatars, dynamic macro recalculation, AI coaching, and privacy.",
+        mainEntity: {
+          "@id": `${SITE.domain}/#software`,
+        },
+      },
+    ],
+  },
   body: `${pageHead("Built for two. Engineered for consistency.", "Food, water, steps, workouts, progress and AI coaching, with a shared accountability room at the center.")}
 
 <section class="section tight"><div class="wrap">
@@ -626,6 +762,23 @@ pages["pricing.html"] = layout({
   file: "pricing.html",
   title: "Plans, Features and Pricing | CaliPartner",
   desc: "Official CaliPartner pricing: Free Basic tier with 1-on-1 partner room, and Pro Plan with unlimited squads, AI avatars, progress journeys, and AI coaching. All taxes inclusive.",
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${SITE.domain}/pricing.html#webpage`,
+        url: `${SITE.domain}/pricing.html`,
+        name: "Plans, Features and Pricing | CaliPartner",
+        description: "Official CaliPartner pricing: Free Basic tier with 1-on-1 partner room, and Pro Plan with unlimited squads, AI avatars, progress journeys, and AI coaching. All taxes inclusive.",
+        mainEntity: {
+          "@type": "OfferCatalog",
+          name: "CaliPartner Subscription Tiers",
+          itemListElement: softwareApplicationSchema.offers,
+        },
+      },
+    ],
+  },
   body: `${pageHead("Plans, Features &amp; Pricing", "Solo logging and 1-on-1 partner rooms are free forever. Upgrade to Pro for unlimited squads, AI avatar body generation, progress pictures transformation journey, and daily AI coaching.")}
 
 <section class="section tight"><div class="wrap">
@@ -943,6 +1096,22 @@ pages["about.html"] = layout({
   file: "about.html",
   title: "About | CaliPartner",
   desc: "CaliPartner exists because fitness is easier with someone beside you. Learn about our product principles, companionships over competition, and team.",
+  schema: {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationSchema,
+      {
+        "@type": "AboutPage",
+        "@id": `${SITE.domain}/about.html#webpage`,
+        url: `${SITE.domain}/about.html`,
+        name: "About CaliPartner",
+        description: "CaliPartner exists because fitness is easier with someone beside you. Learn about our product principles, companionships over competition, and team.",
+        mainEntity: {
+          "@id": `${SITE.domain}/#organization`,
+        },
+      },
+    ],
+  },
   body: `${pageHead("Fitness is easier with someone beside you", "Most trackers are built for one person and most people quit within weeks. We built CaliPartner around the one thing that keeps people going: a person.")}
 <section class="section tight"><div class="wrap">
   ${rows([
@@ -970,6 +1139,26 @@ pages["contact.html"] = layout({
   file: "contact.html",
   title: "Contact and Support | CaliPartner",
   desc: "Contact CaliPartner support for help with your account, billing, refunds, privacy requests or to report a concern.",
+  schema: {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${SITE.domain}/contact.html#webpage`,
+    url: `${SITE.domain}/contact.html`,
+    name: "Contact and Support | CaliPartner",
+    description: "Contact CaliPartner support for help with your account, billing, refunds, privacy requests or to report a concern.",
+    mainEntity: {
+      "@type": "Organization",
+      name: SITE.name,
+      url: `${SITE.domain}/`,
+      email: SITE.email,
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: SITE.email,
+        contactType: "customer support",
+        availableLanguage: ["English", "Hindi"],
+      },
+    },
+  },
   body: `${pageHead("Contact us", "Questions about your account, billing, or privacy? We reply within 2 business days.")}
 <section class="section tight"><div class="wrap grid grid-2" style="align-items:start">
   <div class="card contact-list">
@@ -995,6 +1184,19 @@ pages["blog.html"] = layout({
   file: "blog.html",
   title: "Fitness & Nutrition Guides | CaliPartner Journal",
   desc: "Actionable frameworks on partner accountability, habit consistency, regional nutrition, and community fitness challenges.",
+  schema: {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE.domain}/blog.html#webpage`,
+    url: `${SITE.domain}/blog.html`,
+    name: "Fitness & Nutrition Guides | CaliPartner Journal",
+    description: "Actionable frameworks on partner accountability, habit consistency, regional nutrition, and community fitness challenges.",
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      url: `${SITE.domain}/`,
+    },
+  },
   body: blog.indexPage(SITE, I),
 });
 
@@ -1053,9 +1255,81 @@ for (const [f, html] of Object.entries(pages)) {
 fs.mkdirSync(path.join(__dirname, "assets"), { recursive: true });
 fs.writeFileSync(path.join(__dirname, "assets/favicon.svg"), faviconSvg);
 
-// Generate sitemap & robots.txt
-const urls = Object.keys(pages).map((f) => `<url><loc>${SITE.domain}/${f === "index.html" ? "" : f}</loc></url>`).join("");
-fs.writeFileSync(path.join(__dirname, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
-fs.writeFileSync(path.join(__dirname, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE.domain}/sitemap.xml\n`);
+// Write IndexNow key file
+const INDEXNOW_KEY = "c839f1e46b52478a946b2b6ef4534891";
+fs.writeFileSync(path.join(__dirname, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
+
+// Generate sitemap & robots.txt with search-engine & AI crawler optimization
+const today = new Date().toISOString().split("T")[0];
+const sitemapEntries = Object.keys(pages).map((f) => {
+  const loc = `${SITE.domain}/${f === "index.html" ? "" : f}`;
+  let priority = "0.5";
+  let changefreq = "monthly";
+
+  if (f === "index.html") {
+    priority = "1.0";
+    changefreq = "daily";
+  } else if (f === "features.html" || f === "pricing.html") {
+    priority = "0.9";
+    changefreq = "daily";
+  } else if (f === "blog.html") {
+    priority = "0.8";
+    changefreq = "daily";
+  } else if (f.startsWith("blog-")) {
+    priority = "0.8";
+    changefreq = "weekly";
+  } else if (f === "about.html" || f === "contact.html") {
+    priority = "0.7";
+    changefreq = "monthly";
+  }
+
+  return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+}).join("\n");
+
+fs.writeFileSync(
+  path.join(__dirname, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`
+);
+
+const robotsTxt = `# CaliPartner Robots.txt
+# Explicit crawler permissions for AI search engines, Bing, Google, and standard spiders
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: ${SITE.domain}/sitemap.xml
+Sitemap: https://www.calipartner.site/sitemap.xml
+`;
+fs.writeFileSync(path.join(__dirname, "robots.txt"), robotsTxt);
 
 console.log("Successfully built", Object.keys(pages).length, "pages with Apricot on Espresso branding & October 2026 tiers.");

@@ -1,3 +1,38 @@
+# CaliPartner Robots.txt
+# Explicit crawler permissions for AI search engines, Bing, Google, and standard spiders
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://calipartner.site/sitemap.xml
+Sitemap: https://www.calipartner.site/sitemap.xml
