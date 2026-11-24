@@ -1257,9 +1257,11 @@ for (const [f, html] of Object.entries(pages)) {
 fs.mkdirSync(path.join(__dirname, "assets"), { recursive: true });
 fs.writeFileSync(path.join(__dirname, "assets/favicon.svg"), faviconSvg);
 
-// Write IndexNow key file
-const INDEXNOW_KEY = "c839f1e46b52478a946b2b6ef4534891";
-fs.writeFileSync(path.join(__dirname, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
+// Write IndexNow key files (support both keys across web & app repos)
+const INDEXNOW_KEYS = ["b8f9a2e64c1d30587e9b0a2f4c6d8e1a", "c839f1e46b52478a946b2b6ef4534891"];
+INDEXNOW_KEYS.forEach((key) => {
+  fs.writeFileSync(path.join(__dirname, `${key}.txt`), key);
+});
 
 // Generate sitemap & robots.txt with search-engine & AI crawler optimization
 const today = new Date().toISOString().split("T")[0];

@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 const HOST = "www.calipartner.site";
-const KEY = "c839f1e46b52478a946b2b6ef4534891";
+const KEY = "b8f9a2e64c1d30587e9b0a2f4c6d8e1a";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 // Read all URLs from sitemap.xml
